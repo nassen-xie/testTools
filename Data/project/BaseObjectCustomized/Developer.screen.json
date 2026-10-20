@@ -1,0 +1,44 @@
+{
+  "screenId": "Developer",
+  "screenName": "開発メニュー",
+  "enterKey": true,
+  "baseLayout": "WebPageLayoutForList",
+  "baseTemplate": "WebPageBaseLayout",
+  "variables": [],
+  "interface": [],
+  "nodes": [
+    {
+      "kind": "Table",
+      "physicalName": "TableMain",
+      "logicalName": "メイン",
+      "partType": "Text",
+      "required": false,
+      "maxLength": 0,
+      "minLength": 0,
+      "options": "",
+      "captionVisible": true,
+      "visible": true,
+      "width": "800px",
+      "columns": 4,
+      "children": [
+        {
+          "kind": "MessageView",
+          "physicalName": "messageView",
+          "logicalName": "メッセージ",
+          "partType": "Text",
+          "required": false,
+          "maxLength": 0,
+          "minLength": 0,
+          "options": "",
+          "captionVisible": false,
+          "visible": true,
+          "collapsed": true
+        }
+      ]
+    }
+  ],
+  "code": [
+    "// 画面のイベント（文法は Docoment/语法示例.xlsx）",
+    ""
+  ]
+}

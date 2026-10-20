@@ -1,0 +1,188 @@
+{
+  "name": "Optimistic",
+  "caption": "楽観排他の情報（OptimisticCheck）",
+  "members": [
+    {
+      "logicalName": "表の物理名",
+      "physicalName": "TableName",
+      "baseType": "String(30)",
+      "dataType": "VARCHAR(30)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの列 1",
+      "physicalName": "KeyColumn1",
+      "baseType": "String(50)",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの値 1",
+      "physicalName": "KeyValue1",
+      "baseType": "String(255)",
+      "dataType": "VARCHAR(255)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの列 2",
+      "physicalName": "KeyColumn2",
+      "baseType": "String(50)",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの値 2",
+      "physicalName": "KeyValue2",
+      "baseType": "String(255)",
+      "dataType": "VARCHAR(255)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの列 3",
+      "physicalName": "KeyColumn3",
+      "baseType": "String(50)",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの値 3",
+      "physicalName": "KeyValue3",
+      "baseType": "String(255)",
+      "dataType": "VARCHAR(255)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの列 4",
+      "physicalName": "KeyColumn4",
+      "baseType": "String(50)",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの値 4",
+      "physicalName": "KeyValue4",
+      "baseType": "String(255)",
+      "dataType": "VARCHAR(255)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの列 5",
+      "physicalName": "KeyColumn5",
+      "baseType": "String(50)",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの値 5",
+      "physicalName": "KeyValue5",
+      "baseType": "String(255)",
+      "dataType": "VARCHAR(255)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの列 6",
+      "physicalName": "KeyColumn6",
+      "baseType": "String(50)",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの値 6",
+      "physicalName": "KeyValue6",
+      "baseType": "String(255)",
+      "dataType": "VARCHAR(255)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの列 7",
+      "physicalName": "KeyColumn7",
+      "baseType": "String(50)",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの値 7",
+      "physicalName": "KeyValue7",
+      "baseType": "String(255)",
+      "dataType": "VARCHAR(255)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの列 8",
+      "physicalName": "KeyColumn8",
+      "baseType": "String(50)",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの値 8",
+      "physicalName": "KeyValue8",
+      "baseType": "String(255)",
+      "dataType": "VARCHAR(255)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの列 9",
+      "physicalName": "KeyColumn9",
+      "baseType": "String(50)",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの値 9",
+      "physicalName": "KeyValue9",
+      "baseType": "String(255)",
+      "dataType": "VARCHAR(255)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの列 10",
+      "physicalName": "KeyColumn10",
+      "baseType": "String(50)",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    },
+    {
+      "logicalName": "主キーの値 10",
+      "physicalName": "KeyValue10",
+      "baseType": "String(255)",
+      "dataType": "VARCHAR(255)",
+      "isArray": false
+    },
+    {
+      "logicalName": "更新日時の列",
+      "physicalName": "UpdateColumn",
+      "baseType": "String(50)",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    },
+    {
+      "logicalName": "更新者の列（任意）",
+      "physicalName": "UpdateUserColumn",
+      "baseType": "String(50)",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    },
+    {
+      "logicalName": "読んだときの更新日時",
+      "physicalName": "ReadDate",
+      "baseType": "DateTime(3)",
+      "dataType": "DATETIME(3)",
+      "isArray": false
+    },
+    {
+      "logicalName": "今の更新日時（OptimisticCheck が入れる）",
+      "physicalName": "CurrentDate",
+      "baseType": "DateTime(3)",
+      "dataType": "DATETIME(3)",
+      "isArray": false
+    },
+    {
+      "logicalName": "今の更新者（OptimisticCheck が入れる）",
+      "physicalName": "CurrentUser",
+      "baseType": "String(50)",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    }
+  ]
+}

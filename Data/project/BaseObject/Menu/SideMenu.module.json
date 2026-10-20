@@ -1,0 +1,114 @@
+{
+  "name": "SideMenu",
+  "caption": "サイドメニュー",
+  "variables": [
+    {
+      "logicalName": "メニュー",
+      "physicalName": "Menu",
+      "baseType": "MenuItem",
+      "dataType": "",
+      "scope": "interface",
+      "isArray": true,
+      "direction": "out"
+    },
+    {
+      "logicalName": "グループ1",
+      "physicalName": "group1",
+      "baseType": "MenuItem",
+      "dataType": "",
+      "scope": "local",
+      "isArray": false
+    },
+    {
+      "logicalName": "グループ2",
+      "physicalName": "group2",
+      "baseType": "MenuItem",
+      "dataType": "",
+      "scope": "local",
+      "isArray": false
+    },
+    {
+      "logicalName": "画面ID",
+      "physicalName": "key",
+      "baseType": "String",
+      "dataType": "VARCHAR",
+      "scope": "local",
+      "isArray": false
+    },
+    {
+      "logicalName": "名前",
+      "physicalName": "caption",
+      "baseType": "String",
+      "dataType": "VARCHAR",
+      "scope": "local",
+      "isArray": false
+    },
+    {
+      "logicalName": "アイコン",
+      "physicalName": "icon",
+      "baseType": "String",
+      "dataType": "VARCHAR",
+      "scope": "local",
+      "isArray": false
+    },
+    {
+      "logicalName": "メニューの項目",
+      "physicalName": "item",
+      "baseType": "MenuItem",
+      "dataType": "",
+      "scope": "local",
+      "isArray": false
+    }
+  ],
+  "interface": [
+    {
+      "logicalName": "メニュー",
+      "physicalName": "Menu",
+      "baseType": "MenuItem",
+      "dataType": "",
+      "isArray": true,
+      "direction": "out"
+    }
+  ],
+  "code": [
+    "// サイドメニュー：基本テンプレートのサイドメニュー（sidebar）に表示する項目（画面とグループ）を \u0026Menu に入れる。",
+    "// 画面の表示のたびに呼ばれる（ScriptMenuAdvice）。画面を追加したら、ここに 1 行足す。",
+    "//   画面    ：Screen(画面ID, 名前, アイコン)。URL は /画面ID",
+    "//   グループ：Group(名前, アイコン)。中の項目は \u0026グループ.Children.Add(…)（グループの中にグループも置ける）。最初は閉じていて、クリックで開閉する",
+    "Sub Call",
+    "    \u0026Menu.Clear()",
+    "    \u0026Menu.Add(Screen(\u0022CustomerMasterList\u0022, \u0022取引先マスタ一覧\u0022, \u0022\uD83D\uDCC4\u0022))",
+    "    \u0026Menu.Add(Screen(\u0022listScreen2\u0022, \u0022一覧画面2\u0022, \u0022\uD83D\uDCC4\u0022))",
+    "",
+    "    // グループ1（中に 一覧画面3・一覧画面4 と グループ2）",
+    "    \u0026group1 = Group(\u0022グループ1\u0022, \u0022\uD83D\uDCC1\u0022)",
+    "    \u0026group1.Children.Add(Screen(\u0022listScreen3\u0022, \u0022一覧画面3\u0022, \u0022\uD83D\uDCC4\u0022))",
+    "    \u0026group1.Children.Add(Screen(\u0022listScreen4\u0022, \u0022一覧画面4\u0022, \u0022\uD83D\uDCC4\u0022))",
+    "",
+    "    // グループ2（グループ1 の中。中に 一覧画面5・一覧画面6）",
+    "    \u0026group2 = Group(\u0022グループ2\u0022, \u0022\uD83D\uDCC1\u0022)",
+    "    \u0026group2.Children.Add(Screen(\u0022listScreen5\u0022, \u0022一覧画面5\u0022, \u0022\uD83D\uDCC4\u0022))",
+    "    \u0026group2.Children.Add(Screen(\u0022listScreen6\u0022, \u0022一覧画面6\u0022, \u0022\uD83D\uDCC4\u0022))",
+    "    \u0026group1.Children.Add(\u0026group2)",
+    "",
+    "    \u0026Menu.Add(\u0026group1)",
+    "End Sub",
+    "",
+    "// 画面の項目：画面ID・名前・アイコン（URL は /画面ID）",
+    "Function Screen(\u0026key, \u0026caption, \u0026icon) As MenuItem",
+    "    \u0026item.Key = \u0026key",
+    "    \u0026item.Caption = \u0026caption",
+    "    \u0026item.Url = \u0022/\u0022 \u002B \u0026key",
+    "    \u0026item.Icon = \u0026icon",
+    "    Return \u0026item",
+    "End Function",
+    "",
+    "// グループ：名前・アイコン（中の項目は Children に追加する）",
+    "Function Group(\u0026caption, \u0026icon) As MenuItem",
+    "    \u0026item.Caption = \u0026caption",
+    "    \u0026item.Icon = \u0026icon",
+    "    Return \u0026item",
+    "End Function",
+    ""
+  ]
+}

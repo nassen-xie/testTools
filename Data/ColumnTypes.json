@@ -1,0 +1,1193 @@
+{
+  "columnTypes": [
+    {
+      "logicalName": "分類",
+      "physicalName": "MST00001_CategoryCD",
+      "dataType": "String(3)",
+      "length": 3,
+      "scale": null,
+      "isEnum": false,
+      "type": "CategoryCD"
+    },
+    {
+      "logicalName": "区分",
+      "physicalName": "MST00001_CategoryKBN",
+      "dataType": "String(2)",
+      "length": 2,
+      "scale": null,
+      "isEnum": false,
+      "type": "CategoryKBN"
+    },
+    {
+      "logicalName": "分類名",
+      "physicalName": "MST00001_CategoryNM",
+      "dataType": "String(50)",
+      "length": 50,
+      "scale": null,
+      "isEnum": false,
+      "type": "CategoryNM"
+    },
+    {
+      "logicalName": "区分名",
+      "physicalName": "MST00001_CategoryKBNNM",
+      "dataType": "String(100)",
+      "length": 100,
+      "scale": null,
+      "isEnum": false,
+      "type": "CategoryKBNNM"
+    },
+    {
+      "logicalName": "削除フラグ",
+      "physicalName": "MST00001_DelFlg",
+      "dataType": "String(1)",
+      "length": 1,
+      "scale": null,
+      "isEnum": true,
+      "enumName": "DelFlg",
+      "values": [
+        { "cd": "Act", "value": "0", "name": "輸入" },
+        { "cd": "Del", "value": "1", "name": "輸出" }
+      ],
+      "type": "DelFlg"
+    },
+    {
+      "logicalName": "作成者",
+      "physicalName": "MST00001_CreateUserCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "作成日時",
+      "physicalName": "MST00001_CreateDate",
+      "dataType": "DateTime(3)",
+      "length": 3,
+      "scale": null,
+      "isEnum": false,
+      "type": "DateTime3"
+    },
+    {
+      "logicalName": "更新者",
+      "physicalName": "MST00001_UpdateUserCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "更新日時",
+      "physicalName": "MST00001_UpdateDate",
+      "dataType": "DateTime(3)",
+      "length": 3,
+      "scale": null,
+      "isEnum": false,
+      "type": "DateTime3"
+    },
+    {
+      "logicalName": "担当者コード",
+      "physicalName": "MST00002_UserCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "担当者名",
+      "physicalName": "MST00002_UserNM",
+      "dataType": "String(50)",
+      "length": 50,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserNM"
+    },
+    {
+      "logicalName": "ログインID",
+      "physicalName": "MST00002_LoginUsr",
+      "dataType": "String(20)",
+      "length": 20,
+      "scale": null,
+      "isEnum": false,
+      "type": "LoginUsr"
+    },
+    {
+      "logicalName": "パスワード",
+      "physicalName": "MST00002_LoginPwd",
+      "dataType": "String(100)",
+      "length": 100,
+      "scale": null,
+      "isEnum": false,
+      "type": "LoginPwd"
+    },
+    {
+      "logicalName": "メールアドレス",
+      "physicalName": "MST00002_MailAddress",
+      "dataType": "String(50)",
+      "length": 50,
+      "scale": null,
+      "isEnum": false,
+      "type": "MailAddress"
+    },
+    {
+      "logicalName": "ロール",
+      "physicalName": "MST00002_UserRole",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserRole"
+    },
+    {
+      "logicalName": "部署コード",
+      "physicalName": "MST00002_SectionCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "SectionCD"
+    },
+    {
+      "logicalName": "削除フラグ",
+      "physicalName": "MST00002_DelFlg",
+      "dataType": "String(1)",
+      "length": 1,
+      "scale": null,
+      "isEnum": true,
+      "enumName": "DelFlg",
+      "values": [
+        { "cd": "Act", "value": "0", "name": "輸入" },
+        { "cd": "Del", "value": "1", "name": "輸出" }
+      ],
+      "type": "DelFlg"
+    },
+    {
+      "logicalName": "作成者",
+      "physicalName": "MST00002_CreateUserCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "作成日時",
+      "physicalName": "MST00002_CreateDate",
+      "dataType": "DateTime(3)",
+      "length": 3,
+      "scale": null,
+      "isEnum": false,
+      "type": "DateTime3"
+    },
+    {
+      "logicalName": "更新者",
+      "physicalName": "MST00002_UpdateUserCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "更新日時",
+      "physicalName": "MST00002_UpdateDate",
+      "dataType": "DateTime(3)",
+      "length": 3,
+      "scale": null,
+      "isEnum": false,
+      "type": "DateTime3"
+    },
+    {
+      "logicalName": "商品コード",
+      "physicalName": "MST00003_ItemCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "ItemCD"
+    },
+    {
+      "logicalName": "商品名",
+      "physicalName": "MST00003_ItemNM",
+      "dataType": "String(200)",
+      "length": 200,
+      "scale": null,
+      "isEnum": false,
+      "type": "ItemNM"
+    },
+    {
+      "logicalName": "メーカーコード",
+      "physicalName": "MST00003_MakerCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "MakerCD"
+    },
+    {
+      "logicalName": "品名",
+      "physicalName": "MST00003_Item",
+      "dataType": "String(200)",
+      "length": 200,
+      "scale": null,
+      "isEnum": false,
+      "type": "Item"
+    },
+    {
+      "logicalName": "品番",
+      "physicalName": "MST00003_ItemType",
+      "dataType": "String(50)",
+      "length": 50,
+      "scale": null,
+      "isEnum": false,
+      "type": "ItemType"
+    },
+    {
+      "logicalName": "重量",
+      "physicalName": "MST00003_NetWeight",
+      "dataType": "Number(15,2)",
+      "length": 15,
+      "scale": 2,
+      "isEnum": false,
+      "type": "NetWeight"
+    },
+    {
+      "logicalName": "在庫管理単位",
+      "physicalName": "MST00003_StockUnit",
+      "dataType": "String(20)",
+      "length": 20,
+      "scale": null,
+      "isEnum": false,
+      "type": "StockUnit"
+    },
+    {
+      "logicalName": "備考",
+      "physicalName": "MST00003_Remarks",
+      "dataType": "String(200)",
+      "length": 200,
+      "scale": null,
+      "isEnum": false,
+      "type": "Remarks"
+    },
+    {
+      "logicalName": "削除フラグ",
+      "physicalName": "MST00003_DelFlg",
+      "dataType": "String(1)",
+      "length": 1,
+      "scale": null,
+      "isEnum": true,
+      "enumName": "DelFlg",
+      "values": [
+        { "cd": "Act", "value": "0", "name": "輸入" },
+        { "cd": "Del", "value": "1", "name": "輸出" }
+      ],
+      "type": "DelFlg"
+    },
+    {
+      "logicalName": "作成者",
+      "physicalName": "MST00003_CreateUserCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "作成日時",
+      "physicalName": "MST00003_CreateDate",
+      "dataType": "DateTime(3)",
+      "length": 3,
+      "scale": null,
+      "isEnum": false,
+      "type": "DateTime3"
+    },
+    {
+      "logicalName": "更新者",
+      "physicalName": "MST00003_UpdateUserCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "更新日時",
+      "physicalName": "MST00003_UpdateDate",
+      "dataType": "DateTime(3)",
+      "length": 3,
+      "scale": null,
+      "isEnum": false,
+      "type": "DateTime3"
+    },
+    {
+      "logicalName": "取引先コード",
+      "physicalName": "MST00004_CustomerCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "CustomerCD"
+    },
+    {
+      "logicalName": "取引先請求コード",
+      "physicalName": "MST00004_CustomerInvoiceCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "CustomerInvoiceCD"
+    },
+    {
+      "logicalName": "取引先区分",
+      "physicalName": "MST00004_CustomerKbn",
+      "dataType": "String(2)",
+      "length": 2,
+      "scale": null,
+      "isEnum": true,
+      "enumName": "CustomerKbn",
+      "values": [
+        { "cd": "CUSTOMER", "value": "01", "name": "得意先" },
+        { "cd": "VENDOR", "value": "02", "name": "仕入先" },
+        { "cd": "PARTNER", "value": "03", "name": "業者" }
+      ],
+      "type": "CustomerKbn"
+    },
+    {
+      "logicalName": "取引先名",
+      "physicalName": "MST00004_CustomerNM",
+      "dataType": "String(100)",
+      "length": 100,
+      "scale": null,
+      "isEnum": false,
+      "type": "CustomerNM"
+    },
+    {
+      "logicalName": "取引先略称",
+      "physicalName": "MST00004_CustomerOmission",
+      "dataType": "String(100)",
+      "length": 100,
+      "scale": null,
+      "isEnum": false,
+      "type": "CustomerOmission"
+    },
+    {
+      "logicalName": "地域コード",
+      "physicalName": "MST00004_AreaCD",
+      "dataType": "String(20)",
+      "length": 20,
+      "scale": null,
+      "isEnum": false,
+      "type": "AreaCD"
+    },
+    {
+      "logicalName": "住所1",
+      "physicalName": "MST00004_Address1",
+      "dataType": "String(100)",
+      "length": 100,
+      "scale": null,
+      "isEnum": false,
+      "type": "Address1"
+    },
+    {
+      "logicalName": "住所2",
+      "physicalName": "MST00004_Address2",
+      "dataType": "String(100)",
+      "length": 100,
+      "scale": null,
+      "isEnum": false,
+      "type": "Address2"
+    },
+    {
+      "logicalName": "住所3",
+      "physicalName": "MST00004_Address3",
+      "dataType": "String(100)",
+      "length": 100,
+      "scale": null,
+      "isEnum": false,
+      "type": "Address3"
+    },
+    {
+      "logicalName": "電話番号",
+      "physicalName": "MST00004_Tel",
+      "dataType": "String(20)",
+      "length": 20,
+      "scale": null,
+      "isEnum": false,
+      "type": "Tel"
+    },
+    {
+      "logicalName": "FAX",
+      "physicalName": "MST00004_Fax",
+      "dataType": "String(20)",
+      "length": 20,
+      "scale": null,
+      "isEnum": false,
+      "type": "Fax"
+    },
+    {
+      "logicalName": "郵便番号",
+      "physicalName": "MST00004_Zip",
+      "dataType": "String(200)",
+      "length": 200,
+      "scale": null,
+      "isEnum": false,
+      "type": "Zip"
+    },
+    {
+      "logicalName": "発地コード",
+      "physicalName": "MST00004_FromPlaceCD",
+      "dataType": "String(20)",
+      "length": 20,
+      "scale": null,
+      "isEnum": false,
+      "type": "FromPlaceCD"
+    },
+    {
+      "logicalName": "仕向地コード",
+      "physicalName": "MST00004_ToPlaceCD",
+      "dataType": "String(20)",
+      "length": 20,
+      "scale": null,
+      "isEnum": false,
+      "type": "ToPlaceCD"
+    },
+    {
+      "logicalName": "支払条件コード",
+      "physicalName": "MST00004_PaymentTermsCD",
+      "dataType": "String(20)",
+      "length": 20,
+      "scale": null,
+      "isEnum": false,
+      "type": "PaymentTermsCD"
+    },
+    {
+      "logicalName": "納入場所",
+      "physicalName": "MST00004_DeliveryLocation",
+      "dataType": "String(200)",
+      "length": 200,
+      "scale": null,
+      "isEnum": false,
+      "type": "DeliveryLocation"
+    },
+    {
+      "logicalName": "取引条件コード",
+      "physicalName": "MST00004_TradeTermsCD",
+      "dataType": "String(20)",
+      "length": 20,
+      "scale": null,
+      "isEnum": false,
+      "type": "TradeTermsCD"
+    },
+    {
+      "logicalName": "通貨",
+      "physicalName": "MST00004_Currency",
+      "dataType": "String(20)",
+      "length": 20,
+      "scale": null,
+      "isEnum": false,
+      "type": "Currency"
+    },
+    {
+      "logicalName": "部署名",
+      "physicalName": "MST00004_SectionNM",
+      "dataType": "String(200)",
+      "length": 200,
+      "scale": null,
+      "isEnum": false,
+      "type": "SectionNM"
+    },
+    {
+      "logicalName": "担当者名",
+      "physicalName": "MST00004_UserCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "メールアドレス",
+      "physicalName": "MST00004_MailAddress",
+      "dataType": "String(50)",
+      "length": 50,
+      "scale": null,
+      "isEnum": false,
+      "type": "MailAddress"
+    },
+    {
+      "logicalName": "消費税端数処理区分",
+      "physicalName": "MST00004_TaxRoundKBN",
+      "dataType": "String(2)",
+      "length": 2,
+      "scale": null,
+      "isEnum": false,
+      "type": "TaxRoundKBN"
+    },
+    {
+      "logicalName": "税額通知区分",
+      "physicalName": "MST00004_TaxCalcKBN",
+      "dataType": "String(2)",
+      "length": 2,
+      "scale": null,
+      "isEnum": false,
+      "type": "TaxCalcKBN"
+    },
+    {
+      "logicalName": "請求書作成フラグ",
+      "physicalName": "MST00004_InvoiceCreateFlg",
+      "dataType": "String(1)",
+      "length": 1,
+      "scale": null,
+      "isEnum": false,
+      "type": "InvoiceCreateFlg"
+    },
+    {
+      "logicalName": "削除フラグ",
+      "physicalName": "MST00004_DelFlg",
+      "dataType": "String(1)",
+      "length": 1,
+      "scale": null,
+      "isEnum": true,
+      "enumName": "DelFlg",
+      "values": [
+        { "cd": "Act", "value": "0", "name": "輸入" },
+        { "cd": "Del", "value": "1", "name": "輸出" }
+      ],
+      "type": "DelFlg"
+    },
+    {
+      "logicalName": "作成者",
+      "physicalName": "MST00004_CreateUserCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "作成日時",
+      "physicalName": "MST00004_CreateDate",
+      "dataType": "DateTime(3)",
+      "length": 3,
+      "scale": null,
+      "isEnum": false,
+      "type": "DateTime3"
+    },
+    {
+      "logicalName": "更新者",
+      "physicalName": "MST00004_UpdateUserCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "更新日時",
+      "physicalName": "MST00004_UpdateDate",
+      "dataType": "DateTime(3)",
+      "length": 3,
+      "scale": null,
+      "isEnum": false,
+      "type": "DateTime3"
+    },
+    {
+      "logicalName": "部署コード",
+      "physicalName": "MST00005_SectionCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "SectionCD"
+    },
+    {
+      "logicalName": "部署名",
+      "physicalName": "MST00005_SectionNM",
+      "dataType": "String(200)",
+      "length": 200,
+      "scale": null,
+      "isEnum": false,
+      "type": "SectionNM"
+    },
+    {
+      "logicalName": "削除フラグ",
+      "physicalName": "MST00005_DelFlg",
+      "dataType": "String(1)",
+      "length": 1,
+      "scale": null,
+      "isEnum": true,
+      "enumName": "DelFlg",
+      "values": [
+        { "cd": "Act", "value": "0", "name": "輸入" },
+        { "cd": "Del", "value": "1", "name": "輸出" }
+      ],
+      "type": "DelFlg"
+    },
+    {
+      "logicalName": "作成者",
+      "physicalName": "MST00005_CreateUserCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "作成日時",
+      "physicalName": "MST00005_CreateDate",
+      "dataType": "DateTime(3)",
+      "length": 3,
+      "scale": null,
+      "isEnum": false,
+      "type": "DateTime3"
+    },
+    {
+      "logicalName": "更新者",
+      "physicalName": "MST00005_UpdateUserCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "更新日時",
+      "physicalName": "MST00005_UpdateDate",
+      "dataType": "DateTime(3)",
+      "length": 3,
+      "scale": null,
+      "isEnum": false,
+      "type": "DateTime3"
+    },
+    {
+      "logicalName": "見積番号",
+      "physicalName": "TAS00001_EstimateCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "EstimateCD"
+    },
+    {
+      "logicalName": "取引区分",
+      "physicalName": "TAS00001_TransactionKbn",
+      "dataType": "String(2)",
+      "length": 2,
+      "scale": null,
+      "isEnum": true,
+      "enumName": "TransactionKbn",
+      "values": [
+        { "cd": "IMPORT", "value": "01", "name": "輸入" },
+        { "cd": "EXPORT", "value": "02", "name": "輸出" }
+      ],
+      "type": "TransactionKbn"
+    },
+    {
+      "logicalName": "見積日",
+      "physicalName": "TAS00001_EstimateDate",
+      "dataType": "Date",
+      "length": null,
+      "scale": null,
+      "isEnum": false,
+      "type": "Date8"
+    },
+    {
+      "logicalName": "担当者コード",
+      "physicalName": "TAS00001_UserCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "得意先コード",
+      "physicalName": "TAS00001_CustomerCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "CustomerCD"
+    },
+    {
+      "logicalName": "取引条件コード",
+      "physicalName": "TAS00001_TradeTermsCD",
+      "dataType": "String(20)",
+      "length": 20,
+      "scale": null,
+      "isEnum": false,
+      "type": "TradeTermsCD"
+    },
+    {
+      "logicalName": "支払条件コード",
+      "physicalName": "TAS00001_PaymentTermsCD",
+      "dataType": "String(20)",
+      "length": 20,
+      "scale": null,
+      "isEnum": false,
+      "type": "PaymentTermsCD"
+    },
+    {
+      "logicalName": "メーカーコード",
+      "physicalName": "TAS00001_MakerCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "MakerCD"
+    },
+    {
+      "logicalName": "仕向地コード",
+      "physicalName": "TAS00001_ToPlaceCD",
+      "dataType": "String(20)",
+      "length": 20,
+      "scale": null,
+      "isEnum": false,
+      "type": "ToPlaceCD"
+    },
+    {
+      "logicalName": "納入場所",
+      "physicalName": "TAS00001_DeliveryLocation",
+      "dataType": "String(200)",
+      "length": 200,
+      "scale": null,
+      "isEnum": false,
+      "type": "DeliveryLocation"
+    },
+    {
+      "logicalName": "原産地域コード",
+      "physicalName": "TAS00001_RegionOfOriginCD",
+      "dataType": "String(20)",
+      "length": 20,
+      "scale": null,
+      "isEnum": false,
+      "type": "RegionOfOriginCD"
+    },
+    {
+      "logicalName": "見積有効期限",
+      "physicalName": "TAS00001_ExpirationDate",
+      "dataType": "Date",
+      "length": null,
+      "scale": null,
+      "isEnum": false,
+      "type": "Date8"
+    },
+    {
+      "logicalName": "使用時期",
+      "physicalName": "TAS00001_UsagePeriod",
+      "dataType": "String(20)",
+      "length": 20,
+      "scale": null,
+      "isEnum": false,
+      "type": "UsagePeriod"
+    },
+    {
+      "logicalName": "保険コード",
+      "physicalName": "TAS00001_InsuranceCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "InsuranceCD"
+    },
+    {
+      "logicalName": "通貨",
+      "physicalName": "TAS00001_Currency",
+      "dataType": "String(20)",
+      "length": 20,
+      "scale": null,
+      "isEnum": false,
+      "type": "Currency"
+    },
+    {
+      "logicalName": "レート",
+      "physicalName": "TAS00001_Rate",
+      "dataType": "Number(3,2)",
+      "length": 3,
+      "scale": 2,
+      "isEnum": false,
+      "type": "Rate"
+    },
+    {
+      "logicalName": "取引銀行コード",
+      "physicalName": "TAS00001_OwnBankCode",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "OwnBankCD"
+    },
+    {
+      "logicalName": "消費税端数処理区分",
+      "physicalName": "TAS00001_TaxRound",
+      "dataType": "String(2)",
+      "length": 2,
+      "scale": null,
+      "isEnum": false,
+      "type": "TaxRoundKBN"
+    },
+    {
+      "logicalName": "消費税税率",
+      "physicalName": "TAS00001_TaxRate",
+      "dataType": "Number(3,2)",
+      "length": 3,
+      "scale": 2,
+      "isEnum": false,
+      "type": "TaxRate"
+    },
+    {
+      "logicalName": "金額",
+      "physicalName": "TAS00001_Amount",
+      "dataType": "Number(15,3)",
+      "length": 15,
+      "scale": 3,
+      "isEnum": false,
+      "type": "Amount"
+    },
+    {
+      "logicalName": "消費税金額",
+      "physicalName": "TAS00001_TaxAmount",
+      "dataType": "Number(15,3)",
+      "length": 15,
+      "scale": 3,
+      "isEnum": false,
+      "type": "Amount"
+    },
+    {
+      "logicalName": "円貨換算金額",
+      "physicalName": "TAS00001_YenCurrencyAmount",
+      "dataType": "Number(15,3)",
+      "length": 15,
+      "scale": 3,
+      "isEnum": false,
+      "type": "Amount"
+    },
+    {
+      "logicalName": "円貨換算消費税金額",
+      "physicalName": "TAS00001_YenCurrencyTaxAmount",
+      "dataType": "Number(15,3)",
+      "length": 15,
+      "scale": 3,
+      "isEnum": false,
+      "type": "Amount"
+    },
+    {
+      "logicalName": "備考",
+      "physicalName": "TAS00001_Remarks",
+      "dataType": "String(200)",
+      "length": 200,
+      "scale": null,
+      "isEnum": false,
+      "type": "Remarks"
+    },
+    {
+      "logicalName": "見積ステータス",
+      "physicalName": "TAS00001_EstimateStatus",
+      "dataType": "String(2)",
+      "length": 2,
+      "scale": null,
+      "isEnum": false,
+      "type": "EstimateStatus"
+    },
+    {
+      "logicalName": "承認不要フラグ",
+      "physicalName": "TAS00001_AgreementNoneedFlg",
+      "dataType": "String(1)",
+      "length": 1,
+      "scale": null,
+      "isEnum": false,
+      "type": "AgreementNoneedFlg"
+    },
+    {
+      "logicalName": "差戻し日",
+      "physicalName": "TAS00001_FbDate",
+      "dataType": "Date",
+      "length": null,
+      "scale": null,
+      "isEnum": false,
+      "type": "Date8"
+    },
+    {
+      "logicalName": "差戻しコメント",
+      "physicalName": "TAS00001_FbComment",
+      "dataType": "String(200)",
+      "length": 200,
+      "scale": null,
+      "isEnum": false,
+      "type": "Remarks"
+    },
+    {
+      "logicalName": "申請日",
+      "physicalName": "TAS00001_RequestDate",
+      "dataType": "Date",
+      "length": null,
+      "scale": null,
+      "isEnum": false,
+      "type": "Date8"
+    },
+    {
+      "logicalName": "承認日",
+      "physicalName": "TAS00001_AgreementDate",
+      "dataType": "Date",
+      "length": null,
+      "scale": null,
+      "isEnum": false,
+      "type": "Date8"
+    },
+    {
+      "logicalName": "承認者",
+      "physicalName": "TAS00001_Authorizer",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "最終承認日",
+      "physicalName": "TAS00001_FinalAgreementDate",
+      "dataType": "Date",
+      "length": null,
+      "scale": null,
+      "isEnum": false,
+      "type": "Date8"
+    },
+    {
+      "logicalName": "最終承認者",
+      "physicalName": "TAS00001_FinalAuthorizer",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "削除フラグ",
+      "physicalName": "TAS00001_DelFlg",
+      "dataType": "String(1)",
+      "length": 1,
+      "scale": null,
+      "isEnum": true,
+      "enumName": "DelFlg",
+      "values": [
+        { "cd": "Act", "value": "0", "name": "輸入" },
+        { "cd": "Del", "value": "1", "name": "輸出" }
+      ],
+      "type": "DelFlg"
+    },
+    {
+      "logicalName": "作成者",
+      "physicalName": "TAS00001_CreateUserCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "作成日時",
+      "physicalName": "TAS00001_CreateDate",
+      "dataType": "DateTime(3)",
+      "length": 3,
+      "scale": null,
+      "isEnum": false,
+      "type": "DateTime3"
+    },
+    {
+      "logicalName": "更新者",
+      "physicalName": "TAS00001_UpdateUserCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "更新日時",
+      "physicalName": "TAS00001_UpdateDate",
+      "dataType": "DateTime(3)",
+      "length": 3,
+      "scale": null,
+      "isEnum": false,
+      "type": "DateTime3"
+    },
+    {
+      "logicalName": "見積番号",
+      "physicalName": "TAS00002_EstimateCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "EstimateCD"
+    },
+    {
+      "logicalName": "商品コード",
+      "physicalName": "TAS00002_ItemCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "ItemCD"
+    },
+    {
+      "logicalName": "見積数量",
+      "physicalName": "TAS00002_EstimateQuantity",
+      "dataType": "Number(10,2)",
+      "length": 10,
+      "scale": 2,
+      "isEnum": false,
+      "type": "Quantity"
+    },
+    {
+      "logicalName": "単価②単位数量",
+      "physicalName": "TAS00002_ConversionUnitQuantity",
+      "dataType": "Number(10,2)",
+      "length": 10,
+      "scale": 2,
+      "isEnum": false,
+      "type": "Quantity"
+    },
+    {
+      "logicalName": "見積単価",
+      "physicalName": "TAS00002_EstimateUnitPrice",
+      "dataType": "Number(10,2)",
+      "length": 10,
+      "scale": 2,
+      "isEnum": false,
+      "type": "Price"
+    },
+    {
+      "logicalName": "単位",
+      "physicalName": "TAS00002_Unit",
+      "dataType": "String(20)",
+      "length": 20,
+      "scale": null,
+      "isEnum": false,
+      "type": "Unit"
+    },
+    {
+      "logicalName": "金額",
+      "physicalName": "TAS00002_Amount",
+      "dataType": "Number(15,3)",
+      "length": 15,
+      "scale": 3,
+      "isEnum": false,
+      "type": "Amount"
+    },
+    {
+      "logicalName": "消費税金額",
+      "physicalName": "TAS00002_TaxAmount",
+      "dataType": "Number(15,3)",
+      "length": 15,
+      "scale": 3,
+      "isEnum": false,
+      "type": "Amount"
+    },
+    {
+      "logicalName": "円貨換算金額",
+      "physicalName": "TAS00002_YenCurrencyAmount",
+      "dataType": "Number(15,3)",
+      "length": 15,
+      "scale": 3,
+      "isEnum": false,
+      "type": "Amount"
+    },
+    {
+      "logicalName": "円貨換算消費税金額",
+      "physicalName": "TAS00002_YenCurrencyTaxAmount",
+      "dataType": "Number(15,3)",
+      "length": 15,
+      "scale": 3,
+      "isEnum": false,
+      "type": "Amount"
+    },
+    {
+      "logicalName": "印字用数量",
+      "physicalName": "TAS00002_ShowUnitQuantity",
+      "dataType": "Number(10,2)",
+      "length": 10,
+      "scale": 2,
+      "isEnum": false,
+      "type": "Quantity"
+    },
+    {
+      "logicalName": "印字用単価",
+      "physicalName": "TAS00002_ShowUnitPrice",
+      "dataType": "Number(10,2)",
+      "length": 10,
+      "scale": 2,
+      "isEnum": false,
+      "type": "Price"
+    },
+    {
+      "logicalName": "印字用単位",
+      "physicalName": "TAS00002_ShowUnit",
+      "dataType": "String(20)",
+      "length": 20,
+      "scale": null,
+      "isEnum": false,
+      "type": "Unit"
+    },
+    {
+      "logicalName": "備考",
+      "physicalName": "TAS00002_Remarks",
+      "dataType": "String(200)",
+      "length": 200,
+      "scale": null,
+      "isEnum": false,
+      "type": "Remarks"
+    },
+    {
+      "logicalName": "削除フラグ",
+      "physicalName": "TAS00002_DelFlg",
+      "dataType": "String(1)",
+      "length": 1,
+      "scale": null,
+      "isEnum": true,
+      "enumName": "DelFlg",
+      "values": [
+        { "cd": "Act", "value": "0", "name": "輸入" },
+        { "cd": "Del", "value": "1", "name": "輸出" }
+      ],
+      "type": "DelFlg"
+    },
+    {
+      "logicalName": "作成者",
+      "physicalName": "TAS00002_CreateUserCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "作成日時",
+      "physicalName": "TAS00002_CreateDate",
+      "dataType": "DateTime(3)",
+      "length": 3,
+      "scale": null,
+      "isEnum": false,
+      "type": "DateTime3"
+    },
+    {
+      "logicalName": "更新者",
+      "physicalName": "TAS00002_UpdateUserCD",
+      "dataType": "String(10)",
+      "length": 10,
+      "scale": null,
+      "isEnum": false,
+      "type": "UserCD"
+    },
+    {
+      "logicalName": "更新日時",
+      "physicalName": "TAS00002_UpdateDate",
+      "dataType": "DateTime(3)",
+      "length": 3,
+      "scale": null,
+      "isEnum": false,
+      "type": "DateTime3"
+    }
+  ]
+}

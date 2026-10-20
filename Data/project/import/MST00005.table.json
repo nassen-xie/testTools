@@ -1,0 +1,178 @@
+{
+  "no": 5,
+  "logicalName": "部署マスタ",
+  "physicalName": "MST00005",
+  "remarks": null,
+  "primaryKey": [
+    "MST00005_SectionCD"
+  ],
+  "columns": [
+    {
+      "no": 1,
+      "logicalName": "部署コード",
+      "physicalName": "MST00005_SectionCD",
+      "baseType": "SectionCD",
+      "dataType": "String(10)",
+      "dbType": "CHAR(10)",
+      "notNull": true,
+      "primaryKeyOrder": 1,
+      "default": null,
+      "remarks": null
+    },
+    {
+      "no": 2,
+      "logicalName": "部署名",
+      "physicalName": "MST00005_SectionNM",
+      "baseType": "SectionNM",
+      "dataType": "String(200)",
+      "dbType": "VARCHAR(200)",
+      "notNull": false,
+      "primaryKeyOrder": null,
+      "default": null,
+      "remarks": null
+    },
+    {
+      "no": 3,
+      "logicalName": "削除フラグ",
+      "physicalName": "MST00005_DelFlg",
+      "baseType": "DelFlg",
+      "dataType": "String(1)",
+      "dbType": "CHAR(1)",
+      "notNull": false,
+      "primaryKeyOrder": null,
+      "default": "0",
+      "remarks": null
+    },
+    {
+      "no": 4,
+      "logicalName": "作成者",
+      "physicalName": "MST00005_CreateUserCD",
+      "baseType": "UserCD",
+      "dataType": "String(10)",
+      "dbType": "CHAR(10)",
+      "notNull": false,
+      "primaryKeyOrder": null,
+      "default": null,
+      "remarks": null
+    },
+    {
+      "no": 5,
+      "logicalName": "作成日時",
+      "physicalName": "MST00005_CreateDate",
+      "baseType": "DateTime3",
+      "dataType": "DateTime(3)",
+      "dbType": "TIMESTAMP(3)",
+      "notNull": false,
+      "primaryKeyOrder": null,
+      "default": "Sysdate",
+      "remarks": null
+    },
+    {
+      "no": 6,
+      "logicalName": "更新者",
+      "physicalName": "MST00005_UpdateUserCD",
+      "baseType": "UserCD",
+      "dataType": "String(10)",
+      "dbType": "CHAR(10)",
+      "notNull": false,
+      "primaryKeyOrder": null,
+      "default": null,
+      "remarks": null
+    },
+    {
+      "no": 7,
+      "logicalName": "更新日時",
+      "physicalName": "MST00005_UpdateDate",
+      "baseType": "DateTime3",
+      "dataType": "DateTime(3)",
+      "dbType": "TIMESTAMP(3)",
+      "notNull": false,
+      "primaryKeyOrder": null,
+      "default": "Sysdate",
+      "remarks": null
+    }
+  ],
+  "references": [],
+  "ddlHistory": [
+    {
+      "createdAt": "2026-10-18T15:49:27.2351994+09:00",
+      "kind": "create",
+      "dbKind": "Oracle",
+      "ddl": [
+        "-- 部署マスタ（MST00005）：テーブル作成（Oracle）",
+        "",
+        "CREATE TABLE MST00005 (",
+        "    MST00005_SectionCD CHAR(10) NOT NULL,",
+        "    MST00005_SectionNM VARCHAR(200),",
+        "    MST00005_DelFlg CHAR(1) DEFAULT 0,",
+        "    MST00005_CreateUserCD CHAR(10),",
+        "    MST00005_CreateDate TIMESTAMP(3) DEFAULT Sysdate,",
+        "    MST00005_UpdateUserCD CHAR(10),",
+        "    MST00005_UpdateDate TIMESTAMP(3) DEFAULT Sysdate,",
+        "    CONSTRAINT PK_MST00005 PRIMARY KEY (MST00005_SectionCD)",
+        ");",
+        "",
+        "COMMENT ON TABLE MST00005 IS '部署マスタ';",
+        "",
+        "COMMENT ON COLUMN MST00005.MST00005_SectionCD IS '部署コード';",
+        "",
+        "COMMENT ON COLUMN MST00005.MST00005_SectionNM IS '部署名';",
+        "",
+        "COMMENT ON COLUMN MST00005.MST00005_DelFlg IS '削除フラグ';",
+        "",
+        "COMMENT ON COLUMN MST00005.MST00005_CreateUserCD IS '作成者';",
+        "",
+        "COMMENT ON COLUMN MST00005.MST00005_CreateDate IS '作成日時';",
+        "",
+        "COMMENT ON COLUMN MST00005.MST00005_UpdateUserCD IS '更新者';",
+        "",
+        "COMMENT ON COLUMN MST00005.MST00005_UpdateDate IS '更新日時';"
+      ],
+      "definition": {
+        "physicalName": "MST00005",
+        "columns": [
+          {
+            "physicalName": "MST00005_SectionCD",
+            "dataType": "CHAR(10)",
+            "notNull": true,
+            "primaryKeyOrder": 1
+          },
+          {
+            "physicalName": "MST00005_SectionNM",
+            "dataType": "VARCHAR(200)",
+            "notNull": false
+          },
+          {
+            "physicalName": "MST00005_DelFlg",
+            "dataType": "CHAR(1)",
+            "notNull": false,
+            "default": "0"
+          },
+          {
+            "physicalName": "MST00005_CreateUserCD",
+            "dataType": "CHAR(10)",
+            "notNull": false
+          },
+          {
+            "physicalName": "MST00005_CreateDate",
+            "dataType": "TIMESTAMP(3)",
+            "notNull": false,
+            "default": "Sysdate"
+          },
+          {
+            "physicalName": "MST00005_UpdateUserCD",
+            "dataType": "CHAR(10)",
+            "notNull": false
+          },
+          {
+            "physicalName": "MST00005_UpdateDate",
+            "dataType": "TIMESTAMP(3)",
+            "notNull": false,
+            "default": "Sysdate"
+          }
+        ],
+        "executedAt": "2026-10-18T15:49:27.2352154+09:00"
+      }
+    }
+  ]
+}

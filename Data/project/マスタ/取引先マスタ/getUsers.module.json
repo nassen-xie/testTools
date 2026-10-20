@@ -1,0 +1,73 @@
+{
+  "name": "getUsers",
+  "caption": "取引先マスタモジュール",
+  "variables": [
+    {
+      "logicalName": "ユーザコード",
+      "physicalName": "UserCD",
+      "baseType": "MST00002.MST00002_UserCD",
+      "dataType": "VARCHAR(10)",
+      "scope": "interface",
+      "isArray": false,
+      "direction": "in"
+    },
+    {
+      "logicalName": "ユーザ名",
+      "physicalName": "UserNm",
+      "baseType": "MST00002.MST00002_UserNM",
+      "dataType": "VARCHAR(50)",
+      "scope": "interface",
+      "isArray": false,
+      "direction": "in"
+    },
+    {
+      "logicalName": "担当者マスタ",
+      "physicalName": "Users",
+      "baseType": "MST00002",
+      "dataType": "",
+      "scope": "interface",
+      "isArray": true,
+      "direction": "out"
+    }
+  ],
+  "interface": [
+    {
+      "logicalName": "ユーザコード",
+      "physicalName": "UserCD",
+      "baseType": "MST00002.MST00002_UserCD",
+      "dataType": "VARCHAR(10)",
+      "isArray": false,
+      "direction": "in"
+    },
+    {
+      "logicalName": "ユーザ名",
+      "physicalName": "UserNm",
+      "baseType": "MST00002.MST00002_UserNM",
+      "dataType": "VARCHAR(50)",
+      "isArray": false,
+      "direction": "in"
+    },
+    {
+      "logicalName": "担当者マスタ",
+      "physicalName": "Users",
+      "baseType": "MST00002",
+      "dataType": "",
+      "isArray": true,
+      "direction": "out"
+    }
+  ],
+  "code": [
+    "// モジュールの処理（インターフェース用の変数（Call の引数）は \u0026名前 で使います）",
+    "Sub Call",
+    "",
+    "    Log( \u0022getUsers\u0022)",
+    "    For Each MST00002 , 部署 Into \u0026Users",
+    "        Where MST00002.MST00002_UserCD  Like   \u0022%\u0022 \u002B \u0026UserCD \u002B  \u0022%\u0022   When Not \u0026UserCD.IsEmpty",
+    "        Where MST00002.MST00002_UserNM  Like   \u0022%\u0022 \u002B \u0026UserNm \u002B  \u0022%\u0022   When Not \u0026UserNm.IsEmpty",
+    "        Where MST00002.MST00002_DelFlg  = DelFlg.Act",
+    "    End For",
+    "",
+    "End Sub",
+    ""
+  ]
+}

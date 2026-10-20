@@ -1,0 +1,41 @@
+{
+  "name": "MenuItem",
+  "caption": "メニューの項目",
+  "members": [
+    {
+      "logicalName": "画面ID",
+      "physicalName": "Key",
+      "baseType": "String(255)",
+      "dataType": "VARCHAR(255)",
+      "isArray": false
+    },
+    {
+      "logicalName": "名前",
+      "physicalName": "Caption",
+      "baseType": "String(255)",
+      "dataType": "VARCHAR(255)",
+      "isArray": false
+    },
+    {
+      "logicalName": "URL",
+      "physicalName": "Url",
+      "baseType": "String(255)",
+      "dataType": "VARCHAR(255)",
+      "isArray": false
+    },
+    {
+      "logicalName": "アイコン",
+      "physicalName": "Icon",
+      "baseType": "String(255)",
+      "dataType": "VARCHAR(255)",
+      "isArray": false
+    },
+    {
+      "logicalName": "グループの中の項目",
+      "physicalName": "Children",
+      "baseType": "MenuItem",
+      "dataType": "",
+      "isArray": true
+    }
+  ]
+}
