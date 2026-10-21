@@ -1,0 +1,35 @@
+// 画面のイベント（文法は Docoment/语法示例.xlsx）
+
+Sub Search
+    For Each MST00004  Into &Customers
+        Where MST00004.MST00004_CustomerCD Like "%"+&CustomerCD+"%" When  Not &CustomerCD.IsEmpty
+        Where MST00004.MST00004_CustomerNM Like "%"+&CustomerNM+"%" When  Not &CustomerNM.IsEmpty
+        Order By   MST00004.MST00004_CustomerCD Desc
+    End For
+End Sub
+
+Event btnSearch1.Click
+    Search
+End Event
+
+Event btnClear1.Click
+    &CustomerCD.SetEmpty()
+    &CustomerNM.SetEmpty()
+    &Customers.Clear()
+End Event
+
+Event Customers.btnDetail.Click
+    CustomerMasterDetail.Call(TrnMode.VIEW, &Customers(row).MST00004_CustomerCD)
+End Event
+
+Event Customers.btnEdit.Click
+    CustomerMasterDetail.Call(TrnMode.EDIT, &Customers(row).MST00004_CustomerCD)
+End Event
+
+Event Customers.btnCopy.Click
+    CustomerMasterDetail.Call(TrnMode.COPY, &Customers(row).MST00004_CustomerCD)
+End Event
+
+Event Customers.btnDelete.Click
+    CustomerMasterDetail.Call(TrnMode.DEL, &Customers(row).MST00004_CustomerCD)
+End Event

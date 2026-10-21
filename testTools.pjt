@@ -4,7 +4,7 @@
   "basePackage": "com.nassen.cem",
   "outputDirectory": "codegen",
   "dataDirectory": "Data",
-  "startPage": "/developer",
+  "startPage": "/Developer",
   "applicationName": "CEMシステム",
   "connections": [
     {

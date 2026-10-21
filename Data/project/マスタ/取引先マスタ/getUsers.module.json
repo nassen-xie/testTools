@@ -55,19 +55,5 @@
       "isArray": true,
       "direction": "out"
     }
-  ],
-  "code": [
-    "// モジュールの処理（インターフェース用の変数（Call の引数）は \u0026名前 で使います）",
-    "Sub Call",
-    "",
-    "    Log( \u0022getUsers\u0022)",
-    "    For Each MST00002 , 部署 Into \u0026Users",
-    "        Where MST00002.MST00002_UserCD  Like   \u0022%\u0022 \u002B \u0026UserCD \u002B  \u0022%\u0022   When Not \u0026UserCD.IsEmpty",
-    "        Where MST00002.MST00002_UserNM  Like   \u0022%\u0022 \u002B \u0026UserNm \u002B  \u0022%\u0022   When Not \u0026UserNm.IsEmpty",
-    "        Where MST00002.MST00002_DelFlg  = DelFlg.Act",
-    "    End For",
-    "",
-    "End Sub",
-    ""
   ]
 }

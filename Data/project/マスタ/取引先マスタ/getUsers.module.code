@@ -1,0 +1,11 @@
+// モジュールの処理（インターフェース用の変数（Call の引数）は &名前 で使います）
+Sub Call
+
+    Log( "getUsers")
+    For Each MST00002 , 部署 Into &Users
+        Where MST00002.MST00002_UserCD  Like   "%" + &UserCD +  "%"   When Not &UserCD.IsEmpty
+        Where MST00002.MST00002_UserNM  Like   "%" + &UserNm +  "%"   When Not &UserNm.IsEmpty
+        Where MST00002.MST00002_DelFlg  = DelFlg.Act
+    End For
+
+End Sub

@@ -17,10 +17,5 @@
       "captionVisible": true,
       "visible": true
     }
-  ],
-  "code": [
-    "// テンプレートのコード（画面の BaseLayout でこのテンプレートを選ぶと、画面のコードの最後にコピーする。文法は Docoment/语法示例.xlsx）",
-    "// 画面と同じ名前の Event・Sub・Function は書けません（画面の Form.Load で処理する場合は Sub を作り、画面から呼びます）。",
-    ""
   ]
 }

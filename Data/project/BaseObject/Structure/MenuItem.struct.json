@@ -1,6 +1,6 @@
 {
   "name": "MenuItem",
-  "caption": "メニューの項目",
+  "caption": "メニューStruct",
   "members": [
     {
       "logicalName": "画面ID",

@@ -1,6 +1,6 @@
 {
   "name": "Optimistic",
-  "caption": "楽観排他の情報（OptimisticCheck）",
+  "caption": "楽観排他Struct",
   "members": [
     {
       "logicalName": "表の物理名",

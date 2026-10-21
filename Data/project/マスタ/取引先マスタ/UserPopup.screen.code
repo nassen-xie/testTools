@@ -1,0 +1,40 @@
+// 画面のイベント（文法は Docoment/语法示例.xlsx）
+Event Form.Load
+    getData
+    Log( "Form.Load")
+End Event
+
+Event Users.RowClick
+    &User = &Users.Item(row)
+    &UserCD  =  &User.MST00002_UserCD
+    &UserNm  =  &User.MST00002_UserNM
+
+    Close
+
+End Event
+
+Event btnOk.Click
+
+    Log( "btnOk.Click")
+    Close
+End Event
+
+Event btnCancel.Click
+    Close
+End Event
+
+Sub getData
+    &Users = getUsers.get(&UserCD, &UserNm)
+    Log( "getData")
+End Sub
+
+Event UserCD.Change
+    getData
+    Log( "UserCD.Change")
+
+End Event
+
+Event UserNm.Change
+    getData
+    Log( "UserNm.Change")
+End Event

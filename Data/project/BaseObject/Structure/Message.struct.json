@@ -1,6 +1,6 @@
 {
   "name": "Message",
-  "caption": "メッセージ 1 件（組み込みの型の説明）",
+  "caption": "メッセージStruct",
   "members": [
     {
       "logicalName": "レベル（MsgLevel.Error / Warning / Info）",

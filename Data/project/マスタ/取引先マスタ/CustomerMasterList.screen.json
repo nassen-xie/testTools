@@ -100,7 +100,7 @@
               "minLength": 0,
               "options": "",
               "captionVisible": true,
-              "captionPercentage": "25%",
+              "captionPercentage": "5%",
               "visible": true
             },
             {
@@ -566,43 +566,5 @@
         }
       ]
     }
-  ],
-  "code": [
-    "// 画面のイベント（文法は Docoment/语法示例.xlsx）",
-    "",
-    "Sub Search",
-    "    For Each MST00004  Into \u0026Customers",
-    "        Where MST00004.MST00004_CustomerCD Like \u0022%\u0022\u002B\u0026CustomerCD\u002B\u0022%\u0022 When  Not \u0026CustomerCD.IsEmpty",
-    "        Where MST00004.MST00004_CustomerNM Like \u0022%\u0022\u002B\u0026CustomerNM\u002B\u0022%\u0022 When  Not \u0026CustomerNM.IsEmpty",
-    "        Order By   MST00004.MST00004_CustomerCD Desc",
-    "    End For",
-    "End Sub",
-    "",
-    "Event btnSearch1.Click",
-    "    Search",
-    "End Event",
-    "",
-    "Event btnClear1.Click",
-    "    \u0026CustomerCD.SetEmpty()",
-    "    \u0026CustomerNM.SetEmpty()",
-    "    \u0026Customers.Clear()",
-    "End Event",
-    "",
-    "Event Customers.btnDetail.Click",
-    "    CustomerMasterDetail.Call(TrnMode.VIEW, \u0026Customers(row).MST00004_CustomerCD)",
-    "End Event",
-    "",
-    "Event Customers.btnEdit.Click",
-    "    CustomerMasterDetail.Call(TrnMode.EDIT, \u0026Customers(row).MST00004_CustomerCD)",
-    "End Event",
-    "",
-    "Event Customers.btnCopy.Click",
-    "    CustomerMasterDetail.Call(TrnMode.COPY, \u0026Customers(row).MST00004_CustomerCD)",
-    "End Event",
-    "",
-    "Event Customers.btnDelete.Click",
-    "    CustomerMasterDetail.Call(TrnMode.DEL, \u0026Customers(row).MST00004_CustomerCD)",
-    "End Event",
-    ""
   ]
 }
