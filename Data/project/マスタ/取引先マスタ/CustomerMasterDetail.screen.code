@@ -1,6 +1,7 @@
 // 画面のイベント（文法は Docoment/语法示例.xlsx）
 // ===== テンプレート「WebPageLayoutForDetail」のコード（BaseLayout でテンプレートを選び直すと置き換わる） =====
 Event Form.Load
+    &poMessage.SetEmpty()
 
     If &piTrnMode = TrnMode.NEW  Then
         &Customer.Clear()
@@ -15,7 +16,7 @@ End Event
 
 // 画面タブの Button（名前 btnReturn）を押したとき（ブラウザー）
 Event btnReturn.Click
-    // If Not Confirm("戻りますか？") Then Exit Event
+    // if Not Confirm("戻りますか？") Then Exit Event
     Close
 End Event
 
@@ -61,6 +62,9 @@ Event btnOk.Click
     End If
 
     Commit
+    &ErrorMsgs.Add(NewMessage( MsgLevel.Warning, "Commit "))
+    GlobalEvents.PopupMsg(&ErrorMsgs)
+
     Close
 End Event
 // ===== テンプレートのコードここまで =====

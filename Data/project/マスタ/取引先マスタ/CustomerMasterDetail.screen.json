@@ -23,6 +23,15 @@
       "direction": "in"
     },
     {
+      "logicalName": "メッセージStruct",
+      "physicalName": "poMessage",
+      "baseType": "Message",
+      "dataType": "MESSAGE",
+      "scope": "interface",
+      "isArray": false,
+      "direction": "out"
+    },
+    {
       "logicalName": "取引先マスタ",
       "physicalName": "Customer",
       "baseType": "MST00004",
@@ -70,6 +79,13 @@
       "baseType": "Session",
       "dataType": "SESSION",
       "isArray": false
+    },
+    {
+      "logicalName": "",
+      "physicalName": "ErrorMsgs",
+      "baseType": "Message",
+      "dataType": "MESSAGE",
+      "isArray": true
     }
   ],
   "interface": [
@@ -88,6 +104,14 @@
       "dataType": "VARCHAR(10)",
       "isArray": false,
       "direction": "in"
+    },
+    {
+      "logicalName": "メッセージStruct",
+      "physicalName": "poMessage",
+      "baseType": "Message",
+      "dataType": "MESSAGE",
+      "isArray": false,
+      "direction": "out"
     }
   ],
   "nodes": [
@@ -501,10 +525,10 @@
                   "maxLength": 10,
                   "minLength": 0,
                   "options": "",
-                  "captionVisible": true,
+                  "captionVisible": false,
                   "captionPercentage": "25%",
                   "readOnly": true,
-                  "visible": true
+                  "visible": false
                 },
                 {
                   "kind": "Variable",
@@ -519,7 +543,7 @@
                   "captionVisible": true,
                   "captionPercentage": "25%",
                   "readOnly": true,
-                  "visible": true
+                  "visible": false
                 },
                 {
                   "kind": "Variable",
@@ -534,7 +558,7 @@
                   "captionVisible": true,
                   "captionPercentage": "25%",
                   "readOnly": true,
-                  "visible": true
+                  "visible": false
                 },
                 {
                   "kind": "Variable",
@@ -549,7 +573,7 @@
                   "captionVisible": true,
                   "captionPercentage": "25%",
                   "readOnly": true,
-                  "visible": true
+                  "visible": false
                 }
               ]
             },
@@ -594,6 +618,19 @@
               ]
             }
           ]
+        },
+        {
+          "kind": "MessageView",
+          "physicalName": "messageView",
+          "logicalName": "メッセージ",
+          "partType": "Text",
+          "required": false,
+          "maxLength": 0,
+          "minLength": 0,
+          "options": "",
+          "captionVisible": false,
+          "visible": true,
+          "collapsed": true
         }
       ]
     }

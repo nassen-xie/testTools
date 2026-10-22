@@ -59,6 +59,27 @@
       "baseType": "MST00004",
       "dataType": "",
       "isArray": true
+    },
+    {
+      "logicalName": "ss",
+      "physicalName": "RowSelect",
+      "baseType": "Number(4)",
+      "dataType": "INTEGER(4)",
+      "isArray": false
+    },
+    {
+      "logicalName": "",
+      "physicalName": "RowSelects",
+      "baseType": "Number(4)",
+      "dataType": "INTEGER(4)",
+      "isArray": true
+    },
+    {
+      "logicalName": "メッセージStruct",
+      "physicalName": "rsMessage",
+      "baseType": "Message",
+      "dataType": "MESSAGE",
+      "isArray": false
     }
   ],
   "interface": [],
@@ -88,6 +109,8 @@
           "captionVisible": false,
           "visible": true,
           "backColor": "#FFFFFF",
+          "columns": 3,
+          "defaultButton": "btnSearch1",
           "children": [
             {
               "kind": "Variable",
@@ -100,7 +123,7 @@
               "minLength": 0,
               "options": "",
               "captionVisible": true,
-              "captionPercentage": "5%",
+              "captionPercentage": "25%",
               "visible": true
             },
             {
@@ -142,6 +165,7 @@
               "options": "",
               "captionVisible": true,
               "visible": true,
+              "columns": 3,
               "children": [
                 {
                   "kind": "Variable",
@@ -156,6 +180,7 @@
                   "captionVisible": true,
                   "captionPercentage": "25%",
                   "visible": true,
+                  "autoComplete": true,
                   "children": [
                     {
                       "kind": "PopupScreen",
@@ -260,6 +285,7 @@
                   "captionVisible": true,
                   "captionPercentage": "25%",
                   "visible": true,
+                  "blankItem": "-",
                   "enumDisplay": "ValueName"
                 }
               ]
@@ -334,19 +360,6 @@
               ]
             }
           ]
-        },
-        {
-          "kind": "MessageView",
-          "physicalName": "messageView",
-          "logicalName": "メッセージ",
-          "partType": "Text",
-          "required": false,
-          "maxLength": 0,
-          "minLength": 0,
-          "options": "",
-          "captionVisible": true,
-          "visible": true,
-          "collapsed": true
         },
         {
           "kind": "DataGrid",
@@ -493,7 +506,7 @@
             },
             {
               "kind": "BtnPanel",
-              "physicalName": "btnPanel1",
+              "physicalName": "btnPanel",
               "logicalName": "操作",
               "partType": "Text",
               "required": false,
@@ -559,10 +572,124 @@
                   "visible": true,
                   "confirm": "削除してもよろしいですか？",
                   "skipValidation": true
+                },
+                {
+                  "kind": "Button",
+                  "physicalName": "btn",
+                  "logicalName": "ボタン",
+                  "partType": "Text",
+                  "required": false,
+                  "maxLength": 0,
+                  "minLength": 0,
+                  "options": "",
+                  "captionVisible": true,
+                  "visible": true,
+                  "skipValidation": true
+                }
+              ]
+            },
+            {
+              "kind": "CellPanel",
+              "physicalName": "cellPanel",
+              "logicalName": "操作",
+              "partType": "Text",
+              "required": false,
+              "maxLength": 0,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "visible": true,
+              "children": [
+                {
+                  "kind": "Variable",
+                  "physicalName": "MST00004_Tel",
+                  "logicalName": "電話番号",
+                  "variable": "Customers.MST00004_Tel",
+                  "partType": "Text",
+                  "required": false,
+                  "maxLength": 20,
+                  "minLength": 0,
+                  "options": "",
+                  "captionVisible": false,
+                  "visible": true
+                },
+                {
+                  "kind": "Table",
+                  "physicalName": "table",
+                  "logicalName": "テーブル",
+                  "partType": "Text",
+                  "required": false,
+                  "maxLength": 0,
+                  "minLength": 0,
+                  "options": "",
+                  "captionVisible": true,
+                  "visible": true,
+                  "children": [
+                    {
+                      "kind": "Variable",
+                      "physicalName": "MST00004_FromPlaceCD",
+                      "logicalName": "発地コード",
+                      "variable": "Customers.MST00004_FromPlaceCD",
+                      "partType": "Text",
+                      "required": false,
+                      "maxLength": 20,
+                      "minLength": 0,
+                      "options": "",
+                      "captionVisible": false,
+                      "visible": true
+                    }
+                  ]
+                },
+                {
+                  "kind": "Variable",
+                  "physicalName": "MST00004_Zip",
+                  "logicalName": "郵便番号",
+                  "variable": "Customers.MST00004_Zip",
+                  "partType": "Text",
+                  "required": false,
+                  "maxLength": 200,
+                  "minLength": 0,
+                  "options": "",
+                  "captionVisible": false,
+                  "visible": true
                 }
               ]
             }
-          ]
+          ],
+          "rowVariables": [
+            {
+              "name": "w",
+              "type": "String",
+              "initial": "1",
+              "caption": "ww"
+            },
+            {
+              "name": "e",
+              "type": "Integer",
+              "initial": "2",
+              "caption": "ee"
+            },
+            {
+              "name": "r",
+              "type": "Boolean",
+              "initial": "true",
+              "caption": "rr"
+            }
+          ],
+          "selectedVariable": "RowSelect"
+        },
+        {
+          "kind": "MessageView",
+          "physicalName": "messageView",
+          "logicalName": "メッセージ",
+          "partType": "Text",
+          "required": false,
+          "maxLength": 0,
+          "minLength": 0,
+          "options": "",
+          "captionVisible": true,
+          "visible": true,
+          "collapsed": true
         }
       ]
     }
