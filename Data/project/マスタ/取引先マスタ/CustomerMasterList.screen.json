@@ -98,6 +98,19 @@
       "width": "2400px",
       "children": [
         {
+          "kind": "MessageView",
+          "physicalName": "messageView",
+          "logicalName": "メッセージ",
+          "partType": "Text",
+          "required": false,
+          "maxLength": 0,
+          "minLength": 0,
+          "options": "",
+          "captionVisible": true,
+          "visible": true,
+          "collapsed": true
+        },
+        {
           "kind": "Panel",
           "physicalName": "panel1",
           "logicalName": "パネル",
@@ -114,12 +127,12 @@
           "children": [
             {
               "kind": "Variable",
-              "physicalName": "CustomerCD",
-              "logicalName": "取引先コード",
-              "variable": "CustomerCD",
+              "physicalName": "CustomerNM",
+              "logicalName": "取引先名",
+              "variable": "CustomerNM",
               "partType": "Text",
               "required": false,
-              "maxLength": 10,
+              "maxLength": 100,
               "minLength": 0,
               "options": "",
               "captionVisible": true,
@@ -128,12 +141,12 @@
             },
             {
               "kind": "Variable",
-              "physicalName": "CustomerNM",
-              "logicalName": "取引先名",
-              "variable": "CustomerNM",
+              "physicalName": "CustomerCD",
+              "logicalName": "取引先コード",
+              "variable": "CustomerCD",
               "partType": "Text",
               "required": false,
-              "maxLength": 100,
+              "maxLength": 10,
               "minLength": 0,
               "options": "",
               "captionVisible": true,
@@ -287,6 +300,44 @@
                   "visible": true,
                   "blankItem": "-",
                   "enumDisplay": "ValueName"
+                },
+                {
+                  "kind": "Tabs",
+                  "physicalName": "tabs",
+                  "logicalName": "タブ",
+                  "partType": "Text",
+                  "required": false,
+                  "maxLength": 0,
+                  "minLength": 0,
+                  "options": "",
+                  "captionVisible": false,
+                  "visible": true,
+                  "children": [
+                    {
+                      "kind": "Tab",
+                      "physicalName": "tab",
+                      "logicalName": "ページ 1",
+                      "partType": "Text",
+                      "required": false,
+                      "maxLength": 0,
+                      "minLength": 0,
+                      "options": "",
+                      "captionVisible": true,
+                      "visible": true
+                    },
+                    {
+                      "kind": "Tab",
+                      "physicalName": "tab1",
+                      "logicalName": "ページ 2",
+                      "partType": "Text",
+                      "required": false,
+                      "maxLength": 0,
+                      "minLength": 0,
+                      "options": "",
+                      "captionVisible": true,
+                      "visible": true
+                    }
+                  ]
                 }
               ]
             },
@@ -373,6 +424,8 @@
           "options": "",
           "captionVisible": true,
           "visible": true,
+          "sortable": true,
+          "totalRow": true,
           "children": [
             {
               "kind": "RowNumber",
@@ -677,19 +730,6 @@
             }
           ],
           "selectedVariable": "RowSelect"
-        },
-        {
-          "kind": "MessageView",
-          "physicalName": "messageView",
-          "logicalName": "メッセージ",
-          "partType": "Text",
-          "required": false,
-          "maxLength": 0,
-          "minLength": 0,
-          "options": "",
-          "captionVisible": true,
-          "visible": true,
-          "collapsed": true
         }
       ]
     }

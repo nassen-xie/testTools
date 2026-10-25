@@ -39,6 +39,21 @@
   ],
   "s3Connections": [],
   "ftpConnections": [],
+  "restConnections": [],
+  "apiPublish": {
+    "BasePath": "/api",
+    "Version": "v1",
+    "AuthType": "ApiKey",
+    "JwtIssuer": "",
+    "JwtJwkSetUri": "",
+    "JwtAudience": "",
+    "ClientCertSubjects": "",
+    "CorsOrigins": "",
+    "RateLimitPerMinute": 600,
+    "OpenApi": true,
+    "HideOpenApiInProduction": true,
+    "OpenApiTitle": ""
+  },
   "mavenLibraries": "",
   "extraProperties": "mail.from=info@example.com\napp.title=取引先管理"
 }

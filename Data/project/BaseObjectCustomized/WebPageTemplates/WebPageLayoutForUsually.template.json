@@ -1,6 +1,6 @@
 {
   "screenId": "WebPageLayoutForUsually",
-  "screenName": "通常画面",
+  "screenName": "通常画面（標準）",
   "baseLayout": "WebPageBaseLayout",
   "variables": [],
   "interface": [],
@@ -14,8 +14,9 @@
       "maxLength": 0,
       "minLength": 0,
       "options": "",
-      "captionVisible": true,
-      "visible": true
+      "captionVisible": false,
+      "visible": true,
+      "children": []
     }
   ]
 }

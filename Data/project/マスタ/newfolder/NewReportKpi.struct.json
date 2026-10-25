@@ -1,0 +1,66 @@
+{
+  "name": "NewReportKpi",
+  "caption": "NewReport（数値）",
+  "members": [
+    {
+      "logicalName": "表題",
+      "physicalName": "Title",
+      "dataType": "VARCHAR(100)",
+      "isArray": false
+    },
+    {
+      "logicalName": "対象期間",
+      "physicalName": "Period",
+      "dataType": "VARCHAR(100)",
+      "isArray": false
+    },
+    {
+      "logicalName": "売上高",
+      "physicalName": "Sales",
+      "dataType": "DECIMAL(14,0)",
+      "isArray": false
+    },
+    {
+      "logicalName": "売上高の補足",
+      "physicalName": "SalesNote",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    },
+    {
+      "logicalName": "粗利",
+      "physicalName": "GrossProfit",
+      "dataType": "DECIMAL(14,0)",
+      "isArray": false
+    },
+    {
+      "logicalName": "粗利の補足",
+      "physicalName": "GrossNote",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    },
+    {
+      "logicalName": "受注件数",
+      "physicalName": "Orders",
+      "dataType": "DECIMAL(9,0)",
+      "isArray": false
+    },
+    {
+      "logicalName": "件数の補足",
+      "physicalName": "OrdersNote",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    },
+    {
+      "logicalName": "予算達成率",
+      "physicalName": "Achievement",
+      "dataType": "DECIMAL(5,1)",
+      "isArray": false
+    },
+    {
+      "logicalName": "達成率の補足",
+      "physicalName": "AchievementNote",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    }
+  ]
+}

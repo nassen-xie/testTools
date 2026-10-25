@@ -1,0 +1,106 @@
+{
+  "slips": [
+    {
+      "customerZip": "530-0001",
+      "customerName": "株式会社サンプル商事",
+      "deliveryDate": "2026-10-23",
+      "slipNo": "D-2026-00456",
+      "total": 1170000,
+      "lines": [
+        {
+          "itemName": "Webサーバー構築作業",
+          "quantity": 1,
+          "unit": "式",
+          "unitPrice": 350000,
+          "amount": 350000
+        },
+        {
+          "itemName": "データベース設計",
+          "quantity": 1,
+          "unit": "式",
+          "unitPrice": 280000,
+          "amount": 280000
+        },
+        {
+          "itemName": "画面開発（一覧・詳細・登録）",
+          "quantity": 12,
+          "unit": "画面",
+          "unitPrice": 45000,
+          "amount": 540000
+        },
+        {
+          "itemName": "帳票開発（見積書・請求書）",
+          "quantity": 2,
+          "unit": "帳票",
+          "unitPrice": 60000,
+          "amount": 120000
+        },
+        {
+          "itemName": "REST API 連携",
+          "quantity": 1,
+          "unit": "式",
+          "unitPrice": 180000,
+          "amount": 180000
+        },
+        {
+          "itemName": "結合テスト",
+          "quantity": 5,
+          "unit": "人日",
+          "unitPrice": 50000,
+          "amount": 250000
+        },
+        {
+          "itemName": "操作マニュアル作成",
+          "quantity": 1,
+          "unit": "式",
+          "unitPrice": 80000,
+          "amount": 80000
+        },
+        {
+          "itemName": "導入支援（現地）",
+          "quantity": 2,
+          "unit": "人日",
+          "unitPrice": 60000,
+          "amount": 120000
+        },
+        {
+          "itemName": "保守サポート（初年度）",
+          "quantity": 12,
+          "unit": "月",
+          "unitPrice": 30000,
+          "amount": 360000
+        }
+      ]
+    },
+    {
+      "customerZip": "530-0001",
+      "customerName": "有限会社テスト",
+      "deliveryDate": "2026-10-23",
+      "slipNo": "D-2026-00457",
+      "total": 870000,
+      "lines": [
+        {
+          "itemName": "Webサーバー構築作業",
+          "quantity": 1,
+          "unit": "式",
+          "unitPrice": 350000,
+          "amount": 350000
+        },
+        {
+          "itemName": "データベース設計",
+          "quantity": 1,
+          "unit": "式",
+          "unitPrice": 280000,
+          "amount": 280000
+        },
+        {
+          "itemName": "画面開発（一覧・詳細・登録）",
+          "quantity": 12,
+          "unit": "画面",
+          "unitPrice": 45000,
+          "amount": 540000
+        }
+      ]
+    }
+  ]
+}

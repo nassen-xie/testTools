@@ -1,0 +1,27 @@
+{
+  "name": "NewBehaviors",
+  "caption": "動作の定義",
+  "script": "NewBehaviors.js",
+  "behaviors": [
+    {
+      "name": "new-behaviors-example",
+      "caption": "例：クリックでメッセージを出す",
+      "description": "画面の項目に付ける動作の例（実装は NewBehaviors.js）。",
+      "parameters": [
+        {
+          "name": "message",
+          "caption": "メッセージ",
+          "description": "",
+          "type": "String",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "new-behavior",
+      "caption": "新しい動作",
+      "description": "",
+      "parameters": []
+    }
+  ]
+}

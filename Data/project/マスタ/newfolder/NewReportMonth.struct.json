@@ -1,0 +1,48 @@
+{
+  "name": "NewReportMonth",
+  "caption": "NewReport（月別）",
+  "members": [
+    {
+      "logicalName": "月",
+      "physicalName": "Month",
+      "dataType": "VARCHAR(10)",
+      "isArray": false
+    },
+    {
+      "logicalName": "売上",
+      "physicalName": "Sales",
+      "dataType": "DECIMAL(14,0)",
+      "isArray": false
+    },
+    {
+      "logicalName": "前年",
+      "physicalName": "LastYear",
+      "dataType": "DECIMAL(14,0)",
+      "isArray": false
+    },
+    {
+      "logicalName": "予算",
+      "physicalName": "Budget",
+      "dataType": "DECIMAL(14,0)",
+      "isArray": false
+    },
+    {
+      "logicalName": "前年比（%）",
+      "physicalName": "YoY",
+      "dataType": "DECIMAL(5,1)",
+      "isArray": false
+    },
+    {
+      "logicalName": "差",
+      "physicalName": "Diff",
+      "dataType": "DECIMAL(14,0)",
+      "isArray": false
+    },
+    {
+      "logicalName": "達成率（%）",
+      "physicalName": "Rate",
+      "dataType": "DECIMAL(5,1)",
+      "isArray": false
+    }
+  ]
+}

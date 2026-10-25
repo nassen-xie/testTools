@@ -1,5 +1,5 @@
 /*
- * プロジェクト固有のカスタム CSS（BaseStylesheet.css / app.css の後に読み込む）
+ * プロジェクト固有のカスタム CSS（BaseStylesheet.css（Tailwind の base・utilities）の後に読み込む）
  *
  * 役割：
  *   - Tailwind の utility では表現しにくい、プロジェクト全体の上書きだけをここに書く。
@@ -17,11 +17,6 @@
 body {
     font-feature-settings: "palt" 1;
     letter-spacing: 0.01em;
-}
-
-/* ===== 一覧のスクロールバー分のガタつきを抑える ===== */
-.table-scroll {
-    scrollbar-gutter: stable;
 }
 
 /* ===== 印刷：ヘッダー・サイドバー・操作ボタンは出さない ===== */

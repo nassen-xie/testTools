@@ -140,16 +140,31 @@
           "visible": true,
           "children": [
             {
-              "kind": "Button",
-              "physicalName": "btnReturn",
-              "logicalName": "戻る",
+              "kind": "ButtonGroup",
+              "physicalName": "buttonGroupReturn",
+              "logicalName": "ボタン",
               "partType": "Text",
               "required": false,
               "maxLength": 0,
               "minLength": 0,
               "options": "",
-              "captionVisible": true,
-              "visible": true
+              "captionVisible": false,
+              "className": "actions",
+              "visible": true,
+              "children": [
+                {
+                  "kind": "Button",
+                  "physicalName": "btnReturn",
+                  "logicalName": "戻る",
+                  "partType": "Text",
+                  "required": false,
+                  "maxLength": 0,
+                  "minLength": 0,
+                  "options": "",
+                  "captionVisible": true,
+                  "visible": true
+                }
+              ]
             },
             {
               "kind": "Variable",
@@ -163,7 +178,7 @@
               "options": "",
               "captionVisible": false,
               "visible": true,
-              "columns": 2,
+              "columns": 4,
               "children": [
                 {
                   "kind": "Variable",
@@ -579,7 +594,7 @@
             },
             {
               "kind": "ButtonGroup",
-              "physicalName": "buttonGroup1",
+              "physicalName": "buttonGroup",
               "logicalName": "ボタン",
               "partType": "Text",
               "required": false,

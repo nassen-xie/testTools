@@ -1,0 +1,22 @@
+{
+  "screenId": "WebPageLayoutForDetail",
+  "screenName": "詳細画面（標準）",
+  "baseLayout": "WebPageBaseLayout",
+  "variables": [],
+  "interface": [],
+  "nodes": [
+    {
+      "kind": "Table",
+      "physicalName": "TableMain",
+      "logicalName": "メイン",
+      "partType": "Text",
+      "required": false,
+      "maxLength": 0,
+      "minLength": 0,
+      "options": "",
+      "captionVisible": false,
+      "visible": true,
+      "children": []
+    }
+  ]
+}

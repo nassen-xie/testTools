@@ -1,0 +1,70 @@
+// 画面のイベント（文法は Docoment/语法示例.xlsx）
+// ===== テンプレート「WebPageLayoutForDetail」のコード（BaseLayout でテンプレートを選び直すと置き換わる） =====
+Event Form.Load
+    &poMessage.SetEmpty()
+
+    If &piTrnMode = TrnMode.NEW  Then
+        &Customer.Clear()
+    Else
+        // 読んだ行（更新日時 &Customer.MST00004_UpdateDate も）を画面に持っておく。保存のときの楽観排他で使う
+        If Not &Customer.Load(&piCustomerCd) Then
+            Msg(MsgLevel.Error, "取引先が見つかりません。他の人が削除した可能性があります。")
+        End If
+    End If
+
+End Event
+
+// 画面タブの Button（名前 btnReturn）を押したとき（ブラウザー）
+Event btnReturn.Click
+    // if Not Confirm("戻りますか？") Then Exit Event
+    Close
+End Event
+
+// 確定：新規は登録、編集は楽観排他を確かめてから更新、削除は楽観排他を確かめてから削除
+Event btnOk.Click
+    If &piTrnMode = TrnMode.VIEW Then
+        Close
+    End If
+
+    // 登録者・更新者（ログインの仕組みを作ったら、ログインのときに &Session.Set("UserCD", …) で入れておく）
+    &UserCd = &Session.Get("UserCD")
+
+    // 新しい更新日時（DateTime(3) のため、代入でミリ秒までに切り捨てる。DB の列と同じ値になる）
+    &NewDate = Now
+
+    If &piTrnMode = TrnMode.NEW Or &piTrnMode = TrnMode.COPY Then
+        &Customer.MST00004_CreateUserCD = &UserCd
+        &Customer.MST00004_CreateDate = &NewDate
+        &Customer.MST00004_UpdateUserCD = &UserCd
+        &Customer.MST00004_UpdateDate = &NewDate
+        If Not &Customer.Insert() Then
+            Rollback
+            Msg(MsgLevel.Error, "同じ取引先コードの取引先がすでにあります。")
+            Exit Event
+        End If
+    Else
+        // 楽観排他：画面を開いた後に他の人が更新・削除していないか。行ロックを取って確かめる（Commit・Rollback まで他の人は更新できない）
+        &Info = OptimisticOf(&Customer)
+        OptimisticLockingCheck.Call(&Info, &Res, &Message)
+        If Not &Res Then
+            Rollback
+            Msg(MsgLevel.Error, &Message)
+            Exit Event
+        End If
+
+        If &piTrnMode = TrnMode.DEL Then
+            &Customer.Delete()
+        Else
+            &Customer.MST00004_UpdateUserCD = &UserCd
+            &Customer.MST00004_UpdateDate = &NewDate
+            &Customer.Update()
+        End If
+    End If
+
+    Commit
+    &ErrorMsgs.Add(NewMessage( MsgLevel.Warning, "Commit "))
+    GlobalEvents.PopupMsg(&ErrorMsgs)
+
+    Close
+End Event
+// ===== テンプレートのコードここまで =====

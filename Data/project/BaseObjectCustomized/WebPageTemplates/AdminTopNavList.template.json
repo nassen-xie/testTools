@@ -1,0 +1,172 @@
+{
+  "screenId": "AdminTopNavList",
+  "screenName": "一覧画面（トップナビ）",
+  "columns": 1,
+  "enterKey": true,
+  "baseLayout": "WebPageBaseLayoutTopNav",
+  "variables": [],
+  "interface": [],
+  "nodes": [
+    {
+      "kind": "Table",
+      "physicalName": "TableMain",
+      "logicalName": "メイン",
+      "partType": "Text",
+      "required": false,
+      "maxLength": 0,
+      "minLength": 0,
+      "options": "",
+      "captionVisible": false,
+      "visible": true,
+      "children": [
+        {
+          "kind": "Panel",
+          "physicalName": "SearchPanel",
+          "logicalName": "検索条件",
+          "partType": "Text",
+          "required": false,
+          "maxLength": 0,
+          "minLength": 0,
+          "options": "",
+          "captionVisible": true,
+          "className": "",
+          "visible": true,
+          "columns": 4,
+          "children": [
+            {
+              "kind": "Label",
+              "physicalName": "label1",
+              "logicalName": "ラベル",
+              "partType": "Text",
+              "required": false,
+              "maxLength": 0,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "className": "",
+              "visible": true
+            },
+            {
+              "kind": "Label",
+              "physicalName": "label2",
+              "logicalName": "ラベル",
+              "partType": "Text",
+              "required": false,
+              "maxLength": 0,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "className": "",
+              "visible": true
+            },
+            {
+              "kind": "Label",
+              "physicalName": "label3",
+              "logicalName": "ラベル",
+              "partType": "Text",
+              "required": false,
+              "maxLength": 0,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "className": "",
+              "visible": true
+            },
+            {
+              "kind": "Label",
+              "physicalName": "label4",
+              "logicalName": "ラベル",
+              "partType": "Text",
+              "required": false,
+              "maxLength": 0,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "className": "",
+              "visible": true
+            }
+          ]
+        },
+        {
+          "kind": "ButtonGroup",
+          "physicalName": "buttonGroup1",
+          "logicalName": "ボタン",
+          "partType": "Text",
+          "required": false,
+          "maxLength": 0,
+          "minLength": 0,
+          "options": "",
+          "captionVisible": false,
+          "visible": true,
+          "children": [
+            {
+              "kind": "Button",
+              "physicalName": "btnSearch",
+              "logicalName": "検索",
+              "partType": "Text",
+              "required": false,
+              "maxLength": 0,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "visible": true,
+              "buttonStyle": "Primary"
+            },
+            {
+              "kind": "Button",
+              "physicalName": "btnClear",
+              "logicalName": "クリア",
+              "partType": "Text",
+              "required": false,
+              "maxLength": 0,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "visible": true,
+              "buttonStyle": "Secondary"
+            },
+            {
+              "kind": "Button",
+              "physicalName": "btnNew",
+              "logicalName": "新規作成",
+              "partType": "Text",
+              "required": false,
+              "maxLength": 0,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "visible": true,
+              "buttonStyle": "Primary"
+            },
+            {
+              "kind": "Button",
+              "physicalName": "btnExport",
+              "logicalName": "Export",
+              "partType": "Text",
+              "required": false,
+              "maxLength": 0,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "visible": true,
+              "buttonStyle": "Secondary"
+            }
+          ]
+        },
+        {
+          "kind": "MessageView",
+          "physicalName": "messageView",
+          "logicalName": "メッセージ",
+          "partType": "Text",
+          "required": false,
+          "maxLength": 0,
+          "minLength": 0,
+          "options": "",
+          "captionVisible": false,
+          "visible": true,
+          "collapsed": true
+        }
+      ]
+    }
+  ]
+}
