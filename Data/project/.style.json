@@ -1,5 +1,5 @@
 {
-  "name": "dark",
+  "name": "standard",
   "version": "1.0",
   "files": {
     "BaseObjectCustomized\\WebPageTemplates\\WebPageLayoutForDetail.template.json": "749B468AF9D03A563BDE8FF23BF527847A28C88B492FF70213C85902308EAAF1",
@@ -7,6 +7,6 @@
     "BaseObjectCustomized\\WebPageTemplates\\WebPageLayoutForPopup.template.json": "B4B82ABCFCB94D02BDE739199A9081ABB531FF3ADC880CBC90DECE0133B664D7",
     "BaseObjectCustomized\\WebPageTemplates\\WebPageLayoutForUsually.template.json": "41F2774BE3081969509522879BDC148966153AE32CEB55AD880C6928E0C731C1",
     "BaseObject\\BaseStylesheet\\BaseStylesheet.css": "E866E0EC3CA933D7C2E10C9B8F731E2F7683BD791BC539B6BF9AE5E8329D8719",
-    "BaseObject\\WebPageBaseTemplates\\WebPageBaseLayout.tpl": "0E8B7E80E8CA2E9E08116145CD99EAC8D2058567124DDBE4707D957F4DF83D73"
+    "BaseObject\\WebPageBaseTemplates\\WebPageBaseLayout.tpl": "A13F3A407A5FE9E50673B18520CAD2738EC4B87ABB666063F6F6861CB0C0DE0E"
   }
 }

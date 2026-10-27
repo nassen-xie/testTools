@@ -60,48 +60,6 @@
               "className": "btn-search",
               "visible": true,
               "icon": "search"
-            },
-            {
-              "kind": "Button",
-              "physicalName": "btnClear",
-              "logicalName": "クリア",
-              "partType": "Text",
-              "required": false,
-              "maxLength": 0,
-              "minLength": 0,
-              "options": "",
-              "captionVisible": true,
-              "className": "btn-clear",
-              "visible": true,
-              "icon": "clear"
-            },
-            {
-              "kind": "Button",
-              "physicalName": "btnNew",
-              "logicalName": "新規作成",
-              "partType": "Text",
-              "required": false,
-              "maxLength": 0,
-              "minLength": 0,
-              "options": "",
-              "captionVisible": true,
-              "className": "btn-new",
-              "visible": true,
-              "icon": "add"
-            },
-            {
-              "kind": "Button",
-              "physicalName": "btnExport",
-              "logicalName": "Export",
-              "partType": "Text",
-              "required": false,
-              "maxLength": 0,
-              "minLength": 0,
-              "options": "",
-              "captionVisible": true,
-              "className": "btn-csv",
-              "visible": true,
-              "icon": "download"
             }
           ]
         }

@@ -8,7 +8,6 @@ Event Users.RowClick
     &User = &Users.Item(row)
     &UserCD  =  &User.MST00002_UserCD
     &UserNm  =  &User.MST00002_UserNM
-
     Close
 
 End Event
@@ -36,4 +35,9 @@ End Event
 Event UserNm.Change
     getData
     Log( "UserNm.Change")
+End Event
+
+// 捕まえていないエラー（トランザクションは rollback 済み）
+Event Form.Error(ex)
+    CommonError.Call(ex)
 End Event

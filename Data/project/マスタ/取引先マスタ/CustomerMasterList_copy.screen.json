@@ -593,28 +593,15 @@
             {
               "kind": "CellPanel",
               "physicalName": "cellPanel",
-              "logicalName": "操作",
+              "logicalName": "",
               "partType": "Text",
               "required": false,
               "maxLength": 0,
               "minLength": 0,
               "options": "",
-              "captionVisible": true,
+              "captionVisible": false,
               "visible": true,
               "children": [
-                {
-                  "kind": "Variable",
-                  "physicalName": "MST00004_Tel",
-                  "logicalName": "電話番号",
-                  "variable": "Customers.MST00004_Tel",
-                  "partType": "Text",
-                  "required": false,
-                  "maxLength": 20,
-                  "minLength": 0,
-                  "options": "",
-                  "captionVisible": false,
-                  "visible": true
-                },
                 {
                   "kind": "Table",
                   "physicalName": "table",
@@ -626,6 +613,7 @@
                   "options": "",
                   "captionVisible": true,
                   "visible": true,
+                  "headerCaption": true,
                   "children": [
                     {
                       "kind": "Variable",
@@ -639,21 +627,34 @@
                       "options": "",
                       "captionVisible": false,
                       "visible": true
+                    },
+                    {
+                      "kind": "Variable",
+                      "physicalName": "MST00004_Tel",
+                      "logicalName": "電話番号",
+                      "variable": "Customers.MST00004_Tel",
+                      "partType": "Text",
+                      "required": false,
+                      "maxLength": 20,
+                      "minLength": 0,
+                      "options": "",
+                      "captionVisible": false,
+                      "visible": true
+                    },
+                    {
+                      "kind": "Variable",
+                      "physicalName": "MST00004_Zip",
+                      "logicalName": "郵便番号",
+                      "variable": "Customers.MST00004_Zip",
+                      "partType": "Text",
+                      "required": false,
+                      "maxLength": 200,
+                      "minLength": 0,
+                      "options": "",
+                      "captionVisible": false,
+                      "visible": true
                     }
                   ]
-                },
-                {
-                  "kind": "Variable",
-                  "physicalName": "MST00004_Zip",
-                  "logicalName": "郵便番号",
-                  "variable": "Customers.MST00004_Zip",
-                  "partType": "Text",
-                  "required": false,
-                  "maxLength": 200,
-                  "minLength": 0,
-                  "options": "",
-                  "captionVisible": false,
-                  "visible": true
                 }
               ]
             }

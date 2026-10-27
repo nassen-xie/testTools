@@ -9,3 +9,8 @@ Sub Call
     End For
 
 End Sub
+
+// 捕まえていないエラー（処理の後で呼び出し元にエラーを渡す。DB の処理は書けない）
+Event Module.Error(ex)
+    CommonError.Call(ex)
+End Event

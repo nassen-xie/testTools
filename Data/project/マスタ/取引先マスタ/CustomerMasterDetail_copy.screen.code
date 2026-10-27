@@ -68,3 +68,8 @@ Event btnOk.Click
     Close
 End Event
 // ===== テンプレートのコードここまで =====
+
+// 捕まえていないエラー（トランザクションは rollback 済み）
+Event Form.Error(ex)
+    CommonError.Call(ex)
+End Event

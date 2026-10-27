@@ -393,7 +393,8 @@
                   "options": "",
                   "captionVisible": true,
                   "className": "btn-new",
-                  "visible": true
+                  "visible": true,
+                  "icon": "add"
                 },
                 {
                   "kind": "Button",
@@ -406,7 +407,8 @@
                   "options": "",
                   "captionVisible": true,
                   "className": "btn-csv",
-                  "visible": true
+                  "visible": true,
+                  "icon": "save"
                 }
               ]
             }
@@ -437,7 +439,7 @@
               "minLength": 0,
               "options": "",
               "captionVisible": true,
-              "visible": true,
+              "visible": false,
               "width": "50px"
             },
             {
@@ -581,7 +583,9 @@
                   "captionVisible": true,
                   "className": "btn-view",
                   "visible": true,
-                  "skipValidation": true
+                  "skipValidation": true,
+                  "icon": "search",
+                  "iconOnly": true
                 },
                 {
                   "kind": "Button",
@@ -595,7 +599,9 @@
                   "captionVisible": true,
                   "className": "btn-edit",
                   "visible": true,
-                  "skipValidation": true
+                  "skipValidation": true,
+                  "icon": "edit",
+                  "iconOnly": true
                 },
                 {
                   "kind": "Button",
@@ -609,7 +615,9 @@
                   "captionVisible": true,
                   "className": "btn-copy",
                   "visible": true,
-                  "skipValidation": true
+                  "skipValidation": true,
+                  "icon": "copy",
+                  "iconOnly": true
                 },
                 {
                   "kind": "Button",
@@ -624,7 +632,9 @@
                   "className": "btn-del",
                   "visible": true,
                   "confirm": "削除してもよろしいですか？",
-                  "skipValidation": true
+                  "skipValidation": true,
+                  "icon": "delete",
+                  "iconOnly": true
                 },
                 {
                   "kind": "Button",
@@ -637,7 +647,9 @@
                   "options": "",
                   "captionVisible": true,
                   "visible": true,
-                  "skipValidation": true
+                  "skipValidation": true,
+                  "icon": "clear",
+                  "iconOnly": true
                 }
               ]
             },
@@ -654,19 +666,6 @@
               "visible": true,
               "children": [
                 {
-                  "kind": "Variable",
-                  "physicalName": "MST00004_Tel",
-                  "logicalName": "電話番号",
-                  "variable": "Customers.MST00004_Tel",
-                  "partType": "Text",
-                  "required": false,
-                  "maxLength": 20,
-                  "minLength": 0,
-                  "options": "",
-                  "captionVisible": false,
-                  "visible": true
-                },
-                {
                   "kind": "Table",
                   "physicalName": "table",
                   "logicalName": "テーブル",
@@ -677,7 +676,35 @@
                   "options": "",
                   "captionVisible": true,
                   "visible": true,
+                  "columns": 3,
+                  "headerCaption": true,
                   "children": [
+                    {
+                      "kind": "Variable",
+                      "physicalName": "MST00004_Tel",
+                      "logicalName": "電話番号",
+                      "variable": "Customers.MST00004_Tel",
+                      "partType": "Text",
+                      "required": false,
+                      "maxLength": 20,
+                      "minLength": 0,
+                      "options": "",
+                      "captionVisible": false,
+                      "visible": true
+                    },
+                    {
+                      "kind": "Variable",
+                      "physicalName": "MST00004_Zip",
+                      "logicalName": "郵便番号",
+                      "variable": "Customers.MST00004_Zip",
+                      "partType": "Text",
+                      "required": false,
+                      "maxLength": 200,
+                      "minLength": 0,
+                      "options": "",
+                      "captionVisible": false,
+                      "visible": true
+                    },
                     {
                       "kind": "Variable",
                       "physicalName": "MST00004_FromPlaceCD",
@@ -692,19 +719,6 @@
                       "visible": true
                     }
                   ]
-                },
-                {
-                  "kind": "Variable",
-                  "physicalName": "MST00004_Zip",
-                  "logicalName": "郵便番号",
-                  "variable": "Customers.MST00004_Zip",
-                  "partType": "Text",
-                  "required": false,
-                  "maxLength": 200,
-                  "minLength": 0,
-                  "options": "",
-                  "captionVisible": false,
-                  "visible": true
                 }
               ]
             }
