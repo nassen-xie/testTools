@@ -1,0 +1,19 @@
+// 共通のエラー処理：新しい画面・モジュールの Event Form.Error(ex) / Event Module.Error(ex) から呼ぶ（設定 → コード生成 → Java → エラー処理のモジュール）。
+//   in &ex ：捕まえていないエラー（Code・Description・Detail・Event・Screen・Line・Time）
+// 画面の Form.Error から呼ばれたときは、トランザクションは rollback 済み。モジュールの Module.Error から呼ばれたときは、DB の処理は書けない。
+// 内容は自由に変更してよい（メッセージの文言・ログの出し方・エラーの種類ごとの処理など）。名称・場所は変えられない。
+Sub Call
+    // ログに出す（種類・説明・画面・イベント・行・日時・詳細とスタックトレースをすべて出す）
+    Log(&ex)
+
+    // 利用者へのメッセージ（SQL・内部の情報は出さない）
+    If &ex.Code = タイムアウト Then
+        Msg(MsgLevel.Error, "混み合っています。しばらくしてからもう一度お試しください。")
+    ElseIf &ex.Code = 排他エラー Then
+        Msg(MsgLevel.Error, "他の人が先に更新しました。画面を開き直してから、もう一度入力してください。")
+    ElseIf &ex.Code = データなし Then
+        Msg(MsgLevel.Error, "対象のデータが見つかりません。")
+    Else
+        Msg(MsgLevel.Error, &ex.Description + "（" + &ex.Code + "）")
+    End If
+End Sub

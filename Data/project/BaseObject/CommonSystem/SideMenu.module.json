@@ -1,0 +1,73 @@
+{
+  "name": "SideMenu",
+  "caption": "サイドメニュー",
+  "variables": [
+    {
+      "logicalName": "メニュー",
+      "physicalName": "Menu",
+      "baseType": "MenuItem",
+      "dataType": "",
+      "scope": "interface",
+      "isArray": true,
+      "direction": "out"
+    },
+    {
+      "logicalName": "グループ1",
+      "physicalName": "group1",
+      "baseType": "MenuItem",
+      "dataType": "",
+      "scope": "local",
+      "isArray": false
+    },
+    {
+      "logicalName": "グループ2",
+      "physicalName": "group2",
+      "baseType": "MenuItem",
+      "dataType": "",
+      "scope": "local",
+      "isArray": false
+    },
+    {
+      "logicalName": "画面ID",
+      "physicalName": "key",
+      "baseType": "String(255)",
+      "dataType": "VARCHAR(255)",
+      "scope": "local",
+      "isArray": false
+    },
+    {
+      "logicalName": "名前",
+      "physicalName": "caption",
+      "baseType": "String(255)",
+      "dataType": "VARCHAR(255)",
+      "scope": "local",
+      "isArray": false
+    },
+    {
+      "logicalName": "アイコン",
+      "physicalName": "icon",
+      "baseType": "String(255)",
+      "dataType": "VARCHAR(255)",
+      "scope": "local",
+      "isArray": false
+    },
+    {
+      "logicalName": "メニューの項目",
+      "physicalName": "item",
+      "baseType": "MenuItem",
+      "dataType": "",
+      "scope": "local",
+      "isArray": false
+    }
+  ],
+  "interface": [
+    {
+      "logicalName": "メニュー",
+      "physicalName": "Menu",
+      "baseType": "MenuItem",
+      "dataType": "",
+      "isArray": true,
+      "direction": "out"
+    }
+  ]
+}

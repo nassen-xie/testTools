@@ -1,0 +1,36 @@
+// 楽観排他の確認（共通）：保存・削除の前に呼ぶ。
+//   inout &piOptimistic    ：楽観排他の情報（表名・主キーの列と値・更新日時の列・更新者の列・読んだときの更新日時）。今の更新日時・更新者が入る
+//   out   &poResult  ：True＝保存してよい（&NewDate を更新日時に入れて保存する）、False＝保存しない（&Message を表示する）
+//   out   &poMessage ：False のときのメッセージ
+// 行はロックしない（確認から保存までの短い間に他の人が保存した場合は分からない。厳密にする場合は、先に LoadForUpdate で行をロックする）
+Sub Call
+    &poResult = False
+    &poMessage = ""
+
+    // 今の更新日時・更新者を読む（&piOptimistic.CurrentDate・&piOptimistic.CurrentUser）
+    OptimisticCheck(&piOptimistic)
+    // 行がない：他の人が削除した
+    If &piOptimistic.CurrentDate.IsEmpty Then
+        &poMessage = "他の人が削除しました。画面を開き直してください。"
+        Exit Sub
+    End If
+
+    // 読んだ後に他の人が更新した
+    If &piOptimistic.CurrentDate <> &piOptimistic.ReadDate Then
+        If &piOptimistic.CurrentUser.IsEmpty Then
+            &poMessage = Format("%1 に他の人が先に更新しました。画面を開き直してから、もう一度入力してください。", Format(&piOptimistic.CurrentDate, "yyyy/MM/dd HH:mm:ss"))
+        Else
+            &poMessage = Format("%1 に %2 さんが先に更新しました。画面を開き直してから、もう一度入力してください。", Format(&piOptimistic.CurrentDate, "yyyy/MM/dd HH:mm:ss"), &piOptimistic.CurrentUser)
+        End If
+
+        Log(LogLevel.Info, "排他エラー", &piOptimistic)
+        Exit Sub
+    End If
+
+    &poResult = True
+End Sub
+
+// 捕まえていないエラー（処理の後で呼び出し元にエラーを渡す。DB の処理は書けない）
+Event Module.Error(ex)
+    CommonError.Call(ex)
+End Event
