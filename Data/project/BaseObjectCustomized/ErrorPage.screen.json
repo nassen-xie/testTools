@@ -1,0 +1,218 @@
+{
+  "screenId": "ErrorPage",
+  "screenName": "エラー画面",
+  "noBaseTemplate": true,
+  "variables": [
+    {
+      "logicalName": "HTTP の状態",
+      "physicalName": "status",
+      "baseType": "String(1000)",
+      "dataType": "VARCHAR(1000)",
+      "isArray": false
+    },
+    {
+      "logicalName": "エラーの種類",
+      "physicalName": "errorCode",
+      "baseType": "String(1000)",
+      "dataType": "VARCHAR(1000)",
+      "isArray": false
+    },
+    {
+      "logicalName": "エラーの説明",
+      "physicalName": "errorDescription",
+      "baseType": "String(1000)",
+      "dataType": "VARCHAR(1000)",
+      "isArray": false
+    },
+    {
+      "logicalName": "エラーが起きた画面",
+      "physicalName": "errorScreen",
+      "baseType": "String(1000)",
+      "dataType": "VARCHAR(1000)",
+      "isArray": false
+    },
+    {
+      "logicalName": "エラーが起きたイベント",
+      "physicalName": "errorEvent",
+      "baseType": "String(1000)",
+      "dataType": "VARCHAR(1000)",
+      "isArray": false
+    },
+    {
+      "logicalName": "画面・イベント",
+      "physicalName": "errorPlace",
+      "baseType": "String(1000)",
+      "dataType": "VARCHAR(1000)",
+      "isArray": false
+    },
+    {
+      "logicalName": "エラーが起きた日時",
+      "physicalName": "errorTime",
+      "baseType": "String(1000)",
+      "dataType": "VARCHAR(1000)",
+      "isArray": false
+    }
+  ],
+  "interface": [],
+  "nodes": [
+    {
+      "kind": "Table",
+      "physicalName": "TableMain",
+      "logicalName": "メイン",
+      "partType": "Text",
+      "required": false,
+      "maxLength": 0,
+      "minLength": 0,
+      "options": "",
+      "captionVisible": true,
+      "className": "mx-auto pt-16",
+      "visible": true,
+      "width": "640px",
+      "children": [
+        {
+          "kind": "Panel",
+          "physicalName": "content",
+          "logicalName": "内容",
+          "partType": "Text",
+          "required": false,
+          "maxLength": 0,
+          "minLength": 0,
+          "options": "",
+          "captionVisible": false,
+          "visible": true,
+          "content": true,
+          "children": [
+            {
+              "kind": "Label",
+              "physicalName": "description",
+              "logicalName": "説明",
+              "partType": "Text",
+              "required": false,
+              "maxLength": 0,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "captionPercentage": "100%",
+              "className": "text-sm font-bold text-slate-900",
+              "visible": true,
+              "textVariable": "errorDescription"
+            },
+            {
+              "kind": "Table",
+              "physicalName": "details",
+              "logicalName": "詳細",
+              "partType": "Text",
+              "required": false,
+              "maxLength": 0,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": false,
+              "visible": true,
+              "width": "360px",
+              "columns": 2,
+              "children": [
+                {
+                  "kind": "Label",
+                  "physicalName": "codeCaption",
+                  "logicalName": "種類",
+                  "partType": "Text",
+                  "required": false,
+                  "maxLength": 0,
+                  "minLength": 0,
+                  "options": "",
+                  "captionVisible": true,
+                  "captionPercentage": "100%",
+                  "className": "text-slate-500",
+                  "visible": true
+                },
+                {
+                  "kind": "Label",
+                  "physicalName": "code",
+                  "logicalName": "種類",
+                  "partType": "Text",
+                  "required": false,
+                  "maxLength": 0,
+                  "minLength": 0,
+                  "options": "",
+                  "captionVisible": true,
+                  "captionPercentage": "100%",
+                  "visible": true,
+                  "textVariable": "errorCode"
+                },
+                {
+                  "kind": "Label",
+                  "physicalName": "placeCaption",
+                  "logicalName": "画面・イベント",
+                  "partType": "Text",
+                  "required": false,
+                  "maxLength": 0,
+                  "minLength": 0,
+                  "options": "",
+                  "captionVisible": true,
+                  "captionPercentage": "100%",
+                  "className": "text-slate-500",
+                  "visible": true
+                },
+                {
+                  "kind": "Label",
+                  "physicalName": "place",
+                  "logicalName": "画面・イベント",
+                  "partType": "Text",
+                  "required": false,
+                  "maxLength": 0,
+                  "minLength": 0,
+                  "options": "",
+                  "captionVisible": true,
+                  "captionPercentage": "100%",
+                  "visible": true,
+                  "textVariable": "errorPlace"
+                },
+                {
+                  "kind": "Label",
+                  "physicalName": "timeCaption",
+                  "logicalName": "日時",
+                  "partType": "Text",
+                  "required": false,
+                  "maxLength": 0,
+                  "minLength": 0,
+                  "options": "",
+                  "captionVisible": true,
+                  "captionPercentage": "100%",
+                  "className": "text-slate-500",
+                  "visible": true
+                },
+                {
+                  "kind": "Label",
+                  "physicalName": "time",
+                  "logicalName": "日時",
+                  "partType": "Text",
+                  "required": false,
+                  "maxLength": 0,
+                  "minLength": 0,
+                  "options": "",
+                  "captionVisible": true,
+                  "captionPercentage": "100%",
+                  "visible": true,
+                  "textVariable": "errorTime"
+                }
+              ]
+            },
+            {
+              "kind": "Button",
+              "physicalName": "btnTop",
+              "logicalName": "トップへ戻る",
+              "partType": "Text",
+              "required": false,
+              "maxLength": 0,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "visible": true,
+              "url": "/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

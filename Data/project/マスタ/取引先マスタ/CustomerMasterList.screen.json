@@ -95,7 +95,7 @@
       "options": "",
       "captionVisible": true,
       "visible": true,
-      "width": "2400px",
+      "width": "1600px",
       "children": [
         {
           "kind": "MessageView",
@@ -127,20 +127,6 @@
           "children": [
             {
               "kind": "Variable",
-              "physicalName": "CustomerNM",
-              "logicalName": "取引先名",
-              "variable": "CustomerNM",
-              "partType": "Text",
-              "required": false,
-              "maxLength": 100,
-              "minLength": 0,
-              "options": "",
-              "captionVisible": true,
-              "captionPercentage": "25%",
-              "visible": true
-            },
-            {
-              "kind": "Variable",
               "physicalName": "CustomerCD",
               "logicalName": "取引先コード",
               "variable": "CustomerCD",
@@ -151,6 +137,22 @@
               "options": "",
               "captionVisible": true,
               "captionPercentage": "25%",
+              "className": "wp-150",
+              "visible": true
+            },
+            {
+              "kind": "Variable",
+              "physicalName": "CustomerNM",
+              "logicalName": "取引先名",
+              "variable": "CustomerNM",
+              "partType": "Text",
+              "required": false,
+              "maxLength": 100,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "captionPercentage": "25%",
+              "className": "wp-100",
               "visible": true
             },
             {
@@ -165,7 +167,42 @@
               "options": "",
               "captionVisible": true,
               "captionPercentage": "25%",
+              "className": "wp-150",
               "visible": true
+            },
+            {
+              "kind": "Variable",
+              "physicalName": "CreateDate",
+              "logicalName": "日付",
+              "variable": "CreateDate",
+              "partType": "Date",
+              "required": false,
+              "maxLength": 0,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "captionPercentage": "25%",
+              "className": "wp-150",
+              "visible": true,
+              "wareki": true
+            },
+            {
+              "kind": "Variable",
+              "physicalName": "CustomerKbn",
+              "logicalName": "取引先区分",
+              "variable": "CustomerKbn",
+              "partType": "ComboBox",
+              "required": false,
+              "maxLength": 0,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "captionPercentage": "25%",
+              "className": "wp-100",
+              "visible": true,
+              "blankItem": "-",
+              "multiSelect": true,
+              "enumDisplay": "ValueName"
             },
             {
               "kind": "Table",
@@ -179,6 +216,7 @@
               "captionVisible": true,
               "visible": true,
               "columns": 3,
+              "column": 1,
               "children": [
                 {
                   "kind": "Variable",
@@ -269,37 +307,6 @@
                   "captionVisible": true,
                   "captionPercentage": "25%",
                   "visible": true
-                },
-                {
-                  "kind": "Variable",
-                  "physicalName": "CreateDate",
-                  "logicalName": "日付",
-                  "variable": "CreateDate",
-                  "partType": "Date",
-                  "required": false,
-                  "maxLength": 0,
-                  "minLength": 0,
-                  "options": "",
-                  "captionVisible": true,
-                  "captionPercentage": "25%",
-                  "visible": true,
-                  "wareki": true
-                },
-                {
-                  "kind": "Variable",
-                  "physicalName": "CustomerKbn",
-                  "logicalName": "取引先区分",
-                  "variable": "CustomerKbn",
-                  "partType": "ComboBox",
-                  "required": false,
-                  "maxLength": 0,
-                  "minLength": 0,
-                  "options": "",
-                  "captionVisible": true,
-                  "captionPercentage": "25%",
-                  "visible": true,
-                  "blankItem": "-",
-                  "enumDisplay": "ValueName"
                 },
                 {
                   "kind": "Tabs",
@@ -424,10 +431,12 @@
           "maxLength": 0,
           "minLength": 0,
           "options": "",
-          "captionVisible": true,
+          "captionVisible": false,
           "visible": true,
           "sortable": true,
+          "pagerAlign": "Center",
           "totalRow": true,
+          "totalCaption": "小记",
           "children": [
             {
               "kind": "RowNumber",
@@ -453,7 +462,9 @@
               "minLength": 0,
               "options": "",
               "captionVisible": true,
-              "visible": true
+              "visible": true,
+              "width": "180px",
+              "total": "Label"
             },
             {
               "kind": "Variable",
@@ -466,7 +477,9 @@
               "minLength": 0,
               "options": "",
               "captionVisible": true,
-              "visible": true
+              "visible": true,
+              "width": "180px",
+              "total": "Label"
             },
             {
               "kind": "Variable",
@@ -479,7 +492,9 @@
               "minLength": 0,
               "options": "",
               "captionVisible": true,
-              "visible": true
+              "visible": true,
+              "width": "180px",
+              "total": "Sum"
             },
             {
               "kind": "Variable",
@@ -492,7 +507,8 @@
               "minLength": 0,
               "options": "",
               "captionVisible": true,
-              "visible": true
+              "visible": true,
+              "width": "180px"
             },
             {
               "kind": "Variable",
@@ -505,7 +521,8 @@
               "minLength": 0,
               "options": "",
               "captionVisible": true,
-              "visible": true
+              "visible": true,
+              "width": "180px"
             },
             {
               "kind": "Variable",
@@ -518,7 +535,9 @@
               "minLength": 0,
               "options": "",
               "captionVisible": true,
-              "visible": true
+              "visible": true,
+              "width": "180px",
+              "total": "Avg"
             },
             {
               "kind": "Variable",
@@ -531,7 +550,8 @@
               "minLength": 0,
               "options": "",
               "captionVisible": true,
-              "visible": true
+              "visible": true,
+              "width": "180px"
             },
             {
               "kind": "Variable",
@@ -544,7 +564,8 @@
               "minLength": 0,
               "options": "",
               "captionVisible": true,
-              "visible": true
+              "visible": true,
+              "width": "180px"
             },
             {
               "kind": "Variable",
@@ -557,7 +578,8 @@
               "minLength": 0,
               "options": "",
               "captionVisible": true,
-              "visible": true
+              "visible": true,
+              "width": "180px"
             },
             {
               "kind": "BtnPanel",
@@ -570,6 +592,7 @@
               "options": "",
               "captionVisible": true,
               "visible": true,
+              "width": "320px",
               "children": [
                 {
                   "kind": "Button",
@@ -664,6 +687,7 @@
               "options": "",
               "captionVisible": true,
               "visible": true,
+              "width": "500px",
               "children": [
                 {
                   "kind": "Table",

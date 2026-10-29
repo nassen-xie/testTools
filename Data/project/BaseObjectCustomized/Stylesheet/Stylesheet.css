@@ -1,12 +1,7 @@
-/*
- * プロジェクト固有のカスタム CSS（BaseStylesheet.css（Tailwind の base・utilities）の後に読み込む）
- *
- * 役割：
- *   - Tailwind の utility では表現しにくい、プロジェクト全体の上書きだけをここに書く。
- *   - 画面個別の見た目は .tpl の utility class で指定する（ここに画面専用 CSS を増やさない）。
- *   - utility を再定義するのではなく、テーマ変数・印刷・スクロールバーなど「横断的な上書き」に限定する。
- */
-/* ===== ブランドカラー（Tailwind の blue をプロジェクト色で上書き） ===== */
+/* プロジェクトのスタイルシート（BaseObjectCustomized/Stylesheet/newstyle.css）
+   読み込み順：BaseStylesheet.css（スタイルの theme・base）→ BaseUtilities.css（utilities。プログラムが管理）→ このファイル（プロジェクトで追加・上書き）。
+   規則は Docoment/CSSの規則.md（js- で始まる class は JS 用のため、ここで見た目を付けない）。
+   画面の見た目は .tpl の utility class で指定し、ここにはプロジェクトで追加した class・テーマの色・印刷などプロジェクト全体の上書きだけを書きます。 */
 :root {
     --color-blue-500: #2563eb;
     --color-blue-600: #1d4ed8;
@@ -20,7 +15,7 @@ body {
 }
 
 /* ===== 印刷：ヘッダー・サイドバー・操作ボタンは出さない ===== */
-@media print {
+cc @media print {
     header,
     aside,
     .no-print {

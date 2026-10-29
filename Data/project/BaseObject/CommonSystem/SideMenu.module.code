@@ -6,6 +6,9 @@ Sub Call
     &Menu.Clear()
     &Menu.Add(Screen("CustomerMasterList", "取引先マスタ一覧", "📄"))
     &Menu.Add(Screen("CustomerMasterList_copy", "取引先マスタ一覧_copy", "📄"))
+    &Menu.Add(Screen("newscreen", "newscreen", "📄"))
+
+    &Menu.Add(Screen("demoScreen", "デモ画面", "📄"))
     &Menu.Add(Screen("listScreen2", "一覧画面2", "📄"))
 
     // グループ1（中に 一覧画面3・一覧画面4 と グループ2）

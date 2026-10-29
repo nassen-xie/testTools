@@ -138,7 +138,8 @@
               "visible": true,
               "buttonStyle": "Secondary"
             }
-          ]
+          ],
+          "className": "actions"
         },
         {
           "kind": "MessageView",
@@ -153,7 +154,8 @@
           "visible": true,
           "collapsed": true
         }
-      ]
+      ],
+      "width": "1600px"
     }
   ]
 }

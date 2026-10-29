@@ -11,7 +11,7 @@
     "font": "mincho",
     "fontSize": 10,
     "color": "#2B579A",
-    "backgroundPdf": "newfolder/sample-form_copy.pdf"
+    "backgroundPdf": ""
   },
   "interface": [
     {

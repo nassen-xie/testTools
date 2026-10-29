@@ -1,0 +1,11 @@
+{
+  "values": {
+    "btn.bg-active": "#1042ae",
+    "btn.bg-hover": "#1350d4",
+    "check.ring": "#dae4fc",
+    "input.border-focus": "#2563eb",
+    "input.ring": "#dae4fc",
+    "link.fg-hover": "#1350d4",
+    "panel.head-fg": "#b10b0b"
+  }
+}

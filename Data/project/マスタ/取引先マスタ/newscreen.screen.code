@@ -1,0 +1,5 @@
+// 画面のイベント（文法は Docoment/语法示例.xlsx）
+// 捕まえていないエラー（トランザクションは rollback 済み）
+Event Form.Error(ex)
+    CommonError.Call(ex)
+End Event
