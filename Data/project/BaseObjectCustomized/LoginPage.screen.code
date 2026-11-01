@@ -1,0 +1,7 @@
+// ログインの後の処理：ログインが成功すると /LoginPage を開き、この Event Form.Load が実行される
+// （ログインの前に行こうとしていた画面がある場合は、その画面を開くため実行されない）。
+// ログインしたユーザーは &Session.Get("UserCD") / "UserNM" / "LoginUsr" / "UserRole" で読める（変数定義でタイプ Session の変数 Session を追加する）。
+// ここで記録をつけたり、ロールで行き先を変えたりして、最後に Call で画面を開く。
+Event Form.Load
+    home.Call()
+End Event

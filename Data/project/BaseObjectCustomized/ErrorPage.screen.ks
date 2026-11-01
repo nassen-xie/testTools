@@ -1,6 +1,6 @@
 {
   "screenId": "ErrorPage",
-  "screenName": "エラー画面",
+  "screenName": "",
   "noBaseTemplate": true,
   "variables": [
     {
@@ -65,7 +65,6 @@
       "minLength": 0,
       "options": "",
       "captionVisible": true,
-      "className": "mx-auto pt-16",
       "visible": true,
       "width": "640px",
       "children": [
@@ -207,19 +206,34 @@
               ]
             },
             {
-              "kind": "Button",
-              "physicalName": "btnTop",
-              "logicalName": "トップへ戻る",
+              "kind": "ButtonGroup",
+              "physicalName": "buttonGroup",
+              "logicalName": "ボタン",
               "partType": "Text",
               "required": false,
               "maxLength": 0,
               "minLength": 0,
               "options": "",
-              "captionVisible": true,
+              "captionVisible": false,
               "visible": true,
-              "skipValidation": true,
-              "icon": "back",
-              "url": "/"
+              "textAlign": "Center",
+              "children": [
+                {
+                  "kind": "Button",
+                  "physicalName": "btnTop",
+                  "logicalName": "トップへ戻る",
+                  "partType": "Text",
+                  "required": false,
+                  "maxLength": 0,
+                  "minLength": 0,
+                  "options": "",
+                  "captionVisible": true,
+                  "visible": true,
+                  "skipValidation": true,
+                  "icon": "back",
+                  "url": "/"
+                }
+              ]
             }
           ]
         }

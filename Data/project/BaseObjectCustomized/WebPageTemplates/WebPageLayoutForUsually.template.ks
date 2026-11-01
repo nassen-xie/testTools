@@ -16,6 +16,7 @@
       "options": "",
       "captionVisible": false,
       "visible": true,
+      "columns": 2,
       "children": [
         {
           "kind": "Panel",
@@ -29,7 +30,7 @@
           "captionVisible": true,
           "className": "",
           "visible": true,
-          "columns": 3,
+          "panelHeader": "Bar",
           "children": [
             {
               "kind": "Button",
@@ -123,6 +124,19 @@
               ]
             }
           ]
+        },
+        {
+          "kind": "Panel",
+          "physicalName": "panel",
+          "logicalName": "パネル",
+          "partType": "Text",
+          "required": false,
+          "maxLength": 0,
+          "minLength": 0,
+          "options": "",
+          "captionVisible": true,
+          "visible": true,
+          "panelHeader": "Bar"
         }
       ]
     }

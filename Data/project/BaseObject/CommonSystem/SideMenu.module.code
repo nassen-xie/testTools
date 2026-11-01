@@ -4,8 +4,8 @@
 //   グループ：Group(名前, アイコン)。中の項目は &グループ.Children.Add(…)（グループの中にグループも置ける）。最初は閉じていて、クリックで開閉する
 Sub Call
     &Menu.Clear()
-    &Menu.Add(Screen("CustomerMasterList", "取引先マスタ一覧", "📄"))
     &Menu.Add(Screen("SamplerEstimateList", "Sample 見積一覧画面", "📄"))
+    &Menu.Add(Screen("CustomerMasterList", "取引先マスタ一覧", "📄"))
     &Menu.Add(Screen("newscreen", "newscreen", "📄"))
 
     &Menu.Add(Screen("demoScreen", "デモ画面", "📄"))
