@@ -6,21 +6,21 @@
   "variables": [
     {
       "logicalName": "見積",
-      "physicalName": "Sampletimate",
+      "physicalName": "SampleEstimate",
       "baseType": "SampleEstimateSDT",
       "dataType": "",
       "isArray": false
     },
     {
       "logicalName": "見積",
-      "physicalName": "Sampletimate_tmp",
+      "physicalName": "SampleEstimate_tmp",
       "baseType": "SampleEstimateSDT",
       "dataType": "",
       "isArray": false
     },
     {
       "logicalName": "見積",
-      "physicalName": "Sampletimates",
+      "physicalName": "SampleEstimates",
       "baseType": "SampleEstimateSDT",
       "dataType": "",
       "isArray": true
@@ -38,6 +38,27 @@
       "baseType": "Number(10)",
       "dataType": "BIGINT(10)",
       "isArray": false
+    },
+    {
+      "logicalName": "メッセージStruct",
+      "physicalName": "tmpMessage",
+      "baseType": "Message",
+      "dataType": "MESSAGE",
+      "isArray": false
+    },
+    {
+      "logicalName": "見積Report",
+      "physicalName": "estimate",
+      "baseType": "SampleEstimateReportSDT",
+      "dataType": "",
+      "isArray": false
+    },
+    {
+      "logicalName": "見積明細Report",
+      "physicalName": "lines",
+      "baseType": "SampleEstimateDetailReportSDT",
+      "dataType": "",
+      "isArray": true
     }
   ],
   "interface": [],
@@ -70,9 +91,9 @@
           "children": [
             {
               "kind": "Variable",
-              "physicalName": "Sampletimate",
+              "physicalName": "SampleEstimate",
               "logicalName": "注文",
-              "variable": "Sampletimate",
+              "variable": "SampleEstimate",
               "partType": "Text",
               "required": false,
               "maxLength": 0,
@@ -87,7 +108,7 @@
                   "kind": "Variable",
                   "physicalName": "EstimateCD",
                   "logicalName": "見積番号",
-                  "variable": "Sampletimate.EstimateCD",
+                  "variable": "SampleEstimate.EstimateCD",
                   "partType": "Text",
                   "required": false,
                   "maxLength": 10,
@@ -101,7 +122,7 @@
                   "kind": "Variable",
                   "physicalName": "TransactionKbn",
                   "logicalName": "取引区分",
-                  "variable": "Sampletimate.TransactionKbn",
+                  "variable": "SampleEstimate.TransactionKbn",
                   "partType": "Text",
                   "required": false,
                   "maxLength": 2,
@@ -115,7 +136,7 @@
                   "kind": "Variable",
                   "physicalName": "EstimateDate",
                   "logicalName": "見積日",
-                  "variable": "Sampletimate.EstimateDate",
+                  "variable": "SampleEstimate.EstimateDate",
                   "partType": "Date",
                   "required": false,
                   "maxLength": 0,
@@ -129,7 +150,7 @@
                   "kind": "Variable",
                   "physicalName": "UserCD",
                   "logicalName": "担当者コード",
-                  "variable": "Sampletimate.UserCD",
+                  "variable": "SampleEstimate.UserCD",
                   "partType": "Text",
                   "required": false,
                   "maxLength": 10,
@@ -177,7 +198,7 @@
                               "visible": true,
                               "direction": "inout",
                               "parameterType": "String",
-                              "parameterVariable": "Sampletimate.UserCD"
+                              "parameterVariable": "SampleEstimate.UserCD"
                             },
                             {
                               "kind": "PopupParameter",
@@ -192,7 +213,7 @@
                               "visible": true,
                               "direction": "out",
                               "parameterType": "String",
-                              "parameterVariable": "Sampletimate.UserNm"
+                              "parameterVariable": "SampleEstimate.UserNm"
                             }
                           ]
                         }
@@ -204,7 +225,7 @@
                   "kind": "Variable",
                   "physicalName": "CustomerCD",
                   "logicalName": "得意先コード",
-                  "variable": "Sampletimate.CustomerCD",
+                  "variable": "SampleEstimate.CustomerCD",
                   "partType": "Text",
                   "required": false,
                   "maxLength": 10,
@@ -218,7 +239,7 @@
                   "kind": "Variable",
                   "physicalName": "Amount",
                   "logicalName": "金額",
-                  "variable": "Sampletimate.Amount",
+                  "variable": "SampleEstimate.Amount",
                   "partType": "Number",
                   "required": false,
                   "maxLength": 0,
@@ -232,7 +253,7 @@
             },
             {
               "kind": "ButtonGroup",
-              "physicalName": "buttonGroup1",
+              "physicalName": "buttonGroup",
               "logicalName": "ボタン",
               "partType": "Text",
               "required": false,
@@ -255,7 +276,8 @@
                   "captionVisible": true,
                   "visible": true,
                   "skipValidation": true,
-                  "buttonStyle": "Primary"
+                  "buttonStyle": "Primary",
+                  "icon": "search"
                 },
                 {
                   "kind": "Button",
@@ -268,7 +290,8 @@
                   "options": "",
                   "captionVisible": true,
                   "visible": true,
-                  "skipValidation": true
+                  "skipValidation": true,
+                  "icon": "clear"
                 },
                 {
                   "kind": "Button",
@@ -282,7 +305,8 @@
                   "captionVisible": true,
                   "visible": true,
                   "skipValidation": true,
-                  "buttonStyle": "Primary"
+                  "buttonStyle": "Primary",
+                  "icon": "add"
                 },
                 {
                   "kind": "Button",
@@ -295,7 +319,8 @@
                   "options": "",
                   "captionVisible": true,
                   "visible": true,
-                  "skipValidation": true
+                  "skipValidation": true,
+                  "icon": "download"
                 }
               ]
             }
@@ -303,9 +328,9 @@
         },
         {
           "kind": "DataGrid",
-          "physicalName": "Sampletimates",
+          "physicalName": "SampleEstimates",
           "logicalName": "注文",
-          "variable": "Sampletimates",
+          "variable": "SampleEstimates",
           "partType": "Text",
           "required": false,
           "maxLength": 0,
@@ -410,7 +435,7 @@
               "kind": "Variable",
               "physicalName": "EstimateCD",
               "logicalName": "見積番号",
-              "variable": "Sampletimates.EstimateCD",
+              "variable": "SampleEstimates.EstimateCD",
               "partType": "Text",
               "required": false,
               "maxLength": 10,
@@ -423,7 +448,7 @@
               "kind": "Variable",
               "physicalName": "TransactionKbn",
               "logicalName": "取引区分",
-              "variable": "Sampletimates.TransactionKbn",
+              "variable": "SampleEstimates.TransactionKbn",
               "partType": "Text",
               "required": false,
               "maxLength": 2,
@@ -436,7 +461,7 @@
               "kind": "Variable",
               "physicalName": "EstimateDate",
               "logicalName": "見積日",
-              "variable": "Sampletimates.EstimateDate",
+              "variable": "SampleEstimates.EstimateDate",
               "partType": "Date",
               "required": false,
               "maxLength": 0,
@@ -449,7 +474,7 @@
               "kind": "Variable",
               "physicalName": "UserCD",
               "logicalName": "担当者コード",
-              "variable": "Sampletimates.UserCD",
+              "variable": "SampleEstimates.UserCD",
               "partType": "Text",
               "required": false,
               "maxLength": 10,
@@ -462,7 +487,7 @@
               "kind": "Variable",
               "physicalName": "CustomerCD",
               "logicalName": "得意先コード",
-              "variable": "Sampletimates.CustomerCD",
+              "variable": "SampleEstimates.CustomerCD",
               "partType": "Text",
               "required": false,
               "maxLength": 10,
@@ -475,7 +500,7 @@
               "kind": "Variable",
               "physicalName": "Amount",
               "logicalName": "金額",
-              "variable": "Sampletimates.Amount",
+              "variable": "SampleEstimates.Amount",
               "partType": "Number",
               "required": false,
               "maxLength": 0,

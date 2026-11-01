@@ -1,0 +1,4 @@
+{
+  "name": "BtnIcon",
+  "caption": "フォルダ"
+}

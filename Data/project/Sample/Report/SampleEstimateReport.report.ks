@@ -1,6 +1,6 @@
 {
   "id": "SampleEstimateReport",
-  "name": "見積書",
+  "name": "見積書Report",
   "template": "estimate",
   "page": {
     "size": "A4",
@@ -17,7 +17,7 @@
     {
       "logicalName": "見積の見出し",
       "physicalName": "estimate",
-      "baseType": "SampleEstimateSDT",
+      "baseType": "SampleEstimateReportSDT",
       "dataType": "",
       "scope": "interface",
       "isArray": false
@@ -25,7 +25,7 @@
     {
       "logicalName": "見積の明細",
       "physicalName": "lines",
-      "baseType": "SampleEstimateDetailSDT",
+      "baseType": "SampleEstimateDetailReportSDT",
       "dataType": "",
       "scope": "interface",
       "isArray": true

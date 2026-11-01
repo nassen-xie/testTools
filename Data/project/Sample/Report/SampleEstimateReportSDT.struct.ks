@@ -1,6 +1,6 @@
 {
   "name": "SampleEstimateReportSDT",
-  "caption": "NewReport（見積の見出し）",
+  "caption": "見積の見出しReport",
   "members": [
     {
       "logicalName": "宛先",

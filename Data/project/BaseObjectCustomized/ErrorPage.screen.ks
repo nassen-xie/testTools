@@ -99,7 +99,6 @@
               "visible": true,
               "foreColor": "#000000",
               "fontSize": "16pt",
-              "italic": true,
               "textVariable": "errorDescription"
             },
             {
@@ -114,7 +113,6 @@
               "captionVisible": false,
               "visible": true,
               "fontSize": "24px",
-              "italic": true,
               "width": "360px",
               "columns": 2,
               "children": [
