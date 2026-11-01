@@ -5,7 +5,7 @@
 Sub Call
     &Menu.Clear()
     &Menu.Add(Screen("CustomerMasterList", "取引先マスタ一覧", "📄"))
-    &Menu.Add(Screen("CustomerMasterList_copy", "取引先マスタ一覧_copy", "📄"))
+    &Menu.Add(Screen("SamplerEstimateList", "Sample 見積一覧画面", "📄"))
     &Menu.Add(Screen("newscreen", "newscreen", "📄"))
 
     &Menu.Add(Screen("demoScreen", "デモ画面", "📄"))

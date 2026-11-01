@@ -49,17 +49,16 @@
           "children": [
             {
               "kind": "Button",
-              "physicalName": "btnSearch",
-              "logicalName": "検索",
+              "physicalName": "btnOK",
+              "logicalName": "確定",
               "partType": "Text",
               "required": false,
               "maxLength": 0,
               "minLength": 0,
               "options": "",
               "captionVisible": true,
-              "className": "btn-search",
-              "visible": true,
-              "icon": "search"
+              "visible": false,
+              "icon": "ok"
             }
           ]
         }

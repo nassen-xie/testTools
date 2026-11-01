@@ -1,0 +1,83 @@
+{
+  "name": "SampleEstimateReportSDT",
+  "caption": "NewReport（見積の見出し）",
+  "members": [
+    {
+      "logicalName": "宛先",
+      "physicalName": "CustomerName",
+      "baseType": "String(100)",
+      "dataType": "VARCHAR(100)",
+      "isArray": false
+    },
+    {
+      "logicalName": "件名",
+      "physicalName": "Subject",
+      "baseType": "String(100)",
+      "dataType": "VARCHAR(100)",
+      "isArray": false
+    },
+    {
+      "logicalName": "見積番号",
+      "physicalName": "EstimateNo",
+      "baseType": "String(20)",
+      "dataType": "VARCHAR(20)",
+      "isArray": false
+    },
+    {
+      "logicalName": "発行日",
+      "physicalName": "IssueDate",
+      "baseType": "Date",
+      "dataType": "DATE",
+      "isArray": false
+    },
+    {
+      "logicalName": "納期",
+      "physicalName": "DeliveryTerm",
+      "baseType": "String(50)",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    },
+    {
+      "logicalName": "有効期限",
+      "physicalName": "ValidTerm",
+      "baseType": "String(50)",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    },
+    {
+      "logicalName": "小計",
+      "physicalName": "Subtotal",
+      "baseType": "Number(12)",
+      "dataType": "BIGINT(12)",
+      "isArray": false
+    },
+    {
+      "logicalName": "消費税",
+      "physicalName": "Tax",
+      "baseType": "Number(12)",
+      "dataType": "BIGINT(12)",
+      "isArray": false
+    },
+    {
+      "logicalName": "合計金額",
+      "physicalName": "TotalAmount",
+      "baseType": "Number(12)",
+      "dataType": "BIGINT(12)",
+      "isArray": false
+    },
+    {
+      "logicalName": "担当者",
+      "physicalName": "StaffName",
+      "baseType": "String(50)",
+      "dataType": "VARCHAR(50)",
+      "isArray": false
+    },
+    {
+      "logicalName": "備考",
+      "physicalName": "Note",
+      "baseType": "String(500)",
+      "dataType": "VARCHAR(500)",
+      "isArray": false
+    }
+  ]
+}

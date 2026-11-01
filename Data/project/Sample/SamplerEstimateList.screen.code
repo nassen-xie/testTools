@@ -1,0 +1,64 @@
+// 画面のイベント
+// 捕まえていないエラー（トランザクションは rollback 済み）
+Event Form.Error(ex)
+    CommonError.Call(ex)
+End Event
+
+// ===== テンプレート「WebPageLayoutForList」のコード（BaseLayout でテンプレートを選び直すと置き換わる） =====
+Event Form.Load
+    getData
+    Log( "Form.Load")
+End Event
+
+Sub getData
+    // &SampleUserInfos = getUsers.get(&pioUserCd)
+
+    // 変数定義：&i
+    For &i = 1 To 15
+        &Sampletimate_tmp.Clear()
+        &Sampletimate_tmp.EstimateCD = "10001" + &i
+        &Sampletimate_tmp.TransactionKbn = "田中　"
+        &Sampletimate_tmp.EstimateDate = Now
+        &Sampletimate_tmp.UserCD= "abcde@google.co.jp"
+        &Sampletimate_tmp.CustomerCD = "03-1234-5678"
+        &Sampletimate_tmp.Amount = &i *  &i
+        &Sampletimaters.Add(&Sampletimate_tmp)
+    Next
+
+    Log( "getData")
+End Sub
+
+Event btnClear.Click
+    &Sampletimate.Clear()
+End Event
+
+Event btnSearch.Click
+    getData
+    Log( " btnSearch.Click")
+End Event
+
+Event Sampletimaters.btnDetail.Click
+    SampleEstimateDetail.Call(TrnMode.VIEW, &Sampletimaters(row).EstimateCD, &tmpMessage)
+End Event
+
+Event Sampletimaters.btnEdit.Click
+    SampleEstimateDetail.Call(TrnMode.EDIT, &Sampletimaters(row).EstimateCD, &tmpMessage)
+End Event
+
+Event Sampletimaters.btnCopy.Click
+    SampleEstimateDetail.Call(TrnMode.COPY, &Sampletimaters(row).EstimateCD, &tmpMessage)
+End Event
+
+Event Sampletimaters.btnDelete.Click
+    SampleEstimateDetail.Call(TrnMode.DEL, &Sampletimaters(row).EstimateCD, &tmpMessage)
+End Event
+
+Event btnNew.Click
+    SampleEstimateDetail.Call(TrnMode.NEW, Empty, &tmpMessage)
+End Event
+
+Event btnExport.Click
+    msg("Export")
+End Event
+
+// ===== テンプレートのコードここまで =====

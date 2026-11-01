@@ -368,7 +368,7 @@
           "children": [
             {
               "kind": "Button",
-              "physicalName": "btnOk",
+              "physicalName": "btnEnter",
               "logicalName": "確定",
               "partType": "Text",
               "required": false,
@@ -378,18 +378,6 @@
               "captionVisible": true,
               "visible": true,
               "buttonStyle": "Primary"
-            },
-            {
-              "kind": "Button",
-              "physicalName": "btnCancel",
-              "logicalName": "キャンセル",
-              "partType": "Text",
-              "required": false,
-              "maxLength": 0,
-              "minLength": 0,
-              "options": "",
-              "captionVisible": true,
-              "visible": true
             }
           ]
         }

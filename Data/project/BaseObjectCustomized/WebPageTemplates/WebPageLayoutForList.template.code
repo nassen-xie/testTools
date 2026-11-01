@@ -1,2 +1,36 @@
-// テンプレートのコード（画面の BaseLayout でこのテンプレートを選ぶと、画面のコードの最後にコピーする。文法は Docoment/语法示例.xlsx）
+// テンプレートのコード
 // 画面と同じ名前の Event・Sub・Function は書けません（画面の Form.Load で処理する場合は Sub を作り、画面から呼びます）。
+
+Event Form.Load
+    getData
+    Log( "Form.Load")
+End Event
+
+Sub getData
+    // &SampleUserInfos = getUsers.get(&pioUserCd)
+
+    // 変数定義：&i
+    &Sampletimate_tmp.Clear()
+    For &i = 1 To 15
+        &Sampletimate_tmp.Clear()
+        &Sampletimate_tmp.EstimateCD = "10001" + &i
+        &Sampletimate_tmp.TransactionKbn = "田中　"
+        &Sampletimate_tmp.EstimateDate = Now
+        &Sampletimate_tmp.UserCD= "abcde@google.co.jp"
+        &Sampletimate_tmp.CustomerCD = "03-1234-5678"
+        &Sampletimate_tmp.Amount = &i *  &i
+        &Sampletimates.Add(&Sampletimate_tmp)
+    Next
+
+    Log( "getData")
+End Sub
+
+Event btnClear.Click
+    &Sampletimate.Clear()
+End Event
+
+Event btnSearch.Click
+    getData
+    Log( " btnSearch.Click")
+End Event
+// ===== テンプレートのコードここまで =====

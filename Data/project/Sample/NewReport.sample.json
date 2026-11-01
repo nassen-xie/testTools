@@ -1,0 +1,115 @@
+{
+  "estimate": {
+    "customerName": "株式会社サンプル商事",
+    "subject": "販売管理システム構築",
+    "estimateNo": "E2026-00123",
+    "issueDate": "2026-10-23",
+    "deliveryTerm": "2027年1月末",
+    "validTerm": "発行日より30日",
+    "subtotal": 2685000,
+    "tax": 268500,
+    "totalAmount": 2953500,
+    "staffName": "山田",
+    "note": "お支払い条件：月末締め翌月末払い"
+  },
+  "lines": [
+    {
+      "itemName": "Webサーバー構築作業",
+      "quantity": 1,
+      "unit": "式",
+      "unitPrice": 350000,
+      "amount": 350000
+    },
+    {
+      "itemName": "データベース設計",
+      "quantity": 1,
+      "unit": "式",
+      "unitPrice": 280000,
+      "amount": 280000
+    },
+    {
+      "itemName": "画面開発（一覧・詳細・登録）",
+      "quantity": 12,
+      "unit": "画面",
+      "unitPrice": 45000,
+      "amount": 540000
+    },
+    {
+      "itemName": "帳票開発（見積書・請求書）",
+      "quantity": 2,
+      "unit": "帳票",
+      "unitPrice": 60000,
+      "amount": 120000
+    },
+    {
+      "itemName": "REST API 連携",
+      "quantity": 1,
+      "unit": "式",
+      "unitPrice": 180000,
+      "amount": 180000
+    },
+    {
+      "itemName": "結合テスト",
+      "quantity": 5,
+      "unit": "人日",
+      "unitPrice": 50000,
+      "amount": 250000
+    },
+    {
+      "itemName": "操作マニュアル作成",
+      "quantity": 1,
+      "unit": "式",
+      "unitPrice": 80000,
+      "amount": 80000
+    },
+    {
+      "itemName": "導入支援（現地）",
+      "quantity": 2,
+      "unit": "人日",
+      "unitPrice": 60000,
+      "amount": 120000
+    },
+    {
+      "itemName": "保守サポート（初年度）",
+      "quantity": 12,
+      "unit": "月",
+      "unitPrice": 30000,
+      "amount": 360000
+    },
+    {
+      "itemName": "ライセンス費用",
+      "quantity": 10,
+      "unit": "ユーザー",
+      "unitPrice": 12000,
+      "amount": 120000
+    },
+    {
+      "itemName": "サーバー設定変更",
+      "quantity": 1,
+      "unit": "式",
+      "unitPrice": 40000,
+      "amount": 40000
+    },
+    {
+      "itemName": "データ移行",
+      "quantity": 1,
+      "unit": "式",
+      "unitPrice": 150000,
+      "amount": 150000
+    },
+    {
+      "itemName": "追加帳票（納品書）",
+      "quantity": 1,
+      "unit": "帳票",
+      "unitPrice": 60000,
+      "amount": 60000
+    },
+    {
+      "itemName": "権限設定",
+      "quantity": 1,
+      "unit": "式",
+      "unitPrice": 35000,
+      "amount": 35000
+    }
+  ]
+}

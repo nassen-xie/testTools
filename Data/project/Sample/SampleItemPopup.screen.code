@@ -1,0 +1,52 @@
+// ===== テンプレート「WebPageLayoutForPopup」のコード（BaseLayout でテンプレートを選び直すと置き換わる） =====
+// 画面のイベント（文法は Docoment/语法示例.xlsx）
+Event Form.Load
+    getData
+    Log( "Form.Load")
+End Event
+
+Event SampleItems.RowClick
+    &SampleItem_tmp = &SampleItems.Item(row)
+    &pioItemCd  =  &SampleItem_tmp.ItemCd
+    &poItemNm  =  &SampleItem_tmp.ItemNm
+    Close
+End Event
+
+Sub getData
+    // &SampleUserInfos = getUsers.get(&pioUserCd)
+
+    // 変数定義：&i
+    &SampleItem.Clear()
+    For &i = 1 To 15
+        &SampleItem_tmp.Clear()
+        &SampleItem_tmp.ItemCd = "9001" + &i
+        &SampleItem_tmp.ItemNm = "商品　" + &i
+        &SampleItem_tmp.Quantity = &i *2
+        &SampleItem_tmp.Price = &i *4
+        &SampleItem_tmp.Amount = &SampleItem_tmp.Quantity * &SampleItem_tmp.Price
+        &SampleItems.Add(&SampleItem_tmp)
+    Next
+
+    Log( "getData")
+End Sub
+
+Event SampleItemItemCd.Change
+    getData
+    Log( "ItemCd.Change")
+
+End Event
+
+Event SampleItemItemNm.Change
+    getData
+    Log( "ItemNm.Change")
+End Event
+
+// 捕まえていないエラー（トランザクションは rollback 済み）
+Event Form.Error(ex)
+    CommonError.Call(ex)
+End Event
+// ===== テンプレートのコードここまで =====
+
+Event btnEnter.Click
+    Close
+End Event

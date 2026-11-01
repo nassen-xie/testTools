@@ -1,0 +1,131 @@
+// 画面のイベント
+// 捕まえていないエラー（トランザクションは rollback 済み）
+Event Form.Error(ex)
+    CommonError.Call(ex)
+End Event
+
+// ===== テンプレート「WebPageLayoutForDetail」のコード（BaseLayout でテンプレートを選び直すと置き換わる） =====
+// 画面のイベント
+
+Event Form.Load
+
+    &poMessage.SetEmpty()
+
+    If &piTrnMode = TrnMode.NEW  Then
+        SampleEstimateEstimateCD.ReadOnly =True
+        &SampleEstimate.Clear()
+        &SampleEstimateDetail.Clear()
+        &SampleEstimateDetails.Clear()
+        &SampleEstimateDetails.Add(&SampleEstimateDetail)
+    Else
+        If &piTrnMode = TrnMode.VIEW Then
+            SampleEstimate.ReadOnly =True
+            SampleEstimateDetails.ReadOnly =True
+        Else
+            SampleEstimateEstimateCD.ReadOnly =True
+        End If
+
+//         // 読んだ行（更新日時 UpdateDate ）を画面に持っておく。保存のときの楽観排他で使う
+//         If Not &SampleEstimate.Load(&piEstimateCd) Then    // SampleEstimate テーブル対象ならLoaｄ可能
+//             Msg(MsgLevel.Error, "取引先が見つかりません。他の人が削除した可能性があります。")
+//         End If
+//         For each Estimate into &SampleEstimateDetails
+//             where Estimate.EstimateCd = &piEstimateCd
+//         End For
+// 表示のため
+        getData
+    End If
+End Event
+
+Event btnCancel.Click
+    Close
+End Event
+
+// 確定：新規は登録、編集は楽観排他を確かめてから更新、削除は楽観排他を確かめてから削除
+Event btnOk.Click
+
+    &UserCd = &Session.Get("UserCD")　 //  登録者・更新者
+
+    If &piTrnMode = TrnMode.NEW Or &piTrnMode = TrnMode.COPY Then
+        // 　採番
+        &SampleEstimate.EstimateCD = "10001" + &newEstimateCD
+        &SampleEstimate.CreateUserCD = &UserCd
+        &SampleEstimate.UpdateUserCD = &UserCd
+        //         If Not &SampleEstimate.Insert() Then
+        //             Rollback
+        //             Msg(MsgLevel.Error, "同じ取引先コードの取引先がすでにあります。")
+        //             Exit Event
+        //        End If
+    Else
+        // 楽観排他
+        //         &Info = OptimisticOf(&SampleEstimate)
+        //         OptimisticLockingCheck.Call(&Info, &Res, &Message)
+        If Not &Res Then
+            Rollback
+            Msg(MsgLevel.Error, &Message)
+            Exit Event
+        End If
+
+        If &piTrnMode = TrnMode.DEL Then
+            // &SampleEstimate.Delete()
+        Else
+            //  &SampleEstimate.UpdateUserCD = &UserCd
+            // &SampleEstimate.Update()
+        End If
+    End If
+
+    Commit
+    &ErrorMsgs.Add(NewMessage( MsgLevel.Warning, "Commit "))
+    GlobalEvents.PopupMsg(&ErrorMsgs)
+
+    Close
+End Event
+
+Sub getData
+    // &SampleEstimate = getEstimate.get(&piEstimateCd)
+
+    &SampleEstimate.Clear()
+    &SampleEstimateDetails.Clear()
+
+    &SampleEstimate.EstimateCD = "10001" + &i
+    &SampleEstimate.TransactionKbn = "田中　"
+    &SampleEstimate.EstimateDate = Now
+    &SampleEstimate.UserCD= "abcde@google.co.jp"
+    &SampleEstimate.CustomerCD = "03-1234-5678"
+
+    For &i = 1 To 15
+        &SampleEstimateDetail.Clear()
+        &SampleEstimateDetail.ItemCd = "100" + &i
+        &SampleEstimateDetail.ItemNm = "商品名" + &i
+        &SampleEstimateDetail.unit = "Kg"
+        &SampleEstimateDetail.CreateDate = Now
+        &SampleEstimateDetail.Quantity = &i + 2
+        &SampleEstimateDetail.Price= &i + 2
+        &SampleEstimateDetail.Amount =  &SampleEstimateDetail.Quantity  * &SampleEstimateDetail.Price
+        &SampleEstimateDetails.Add(&SampleEstimateDetail)
+    Next
+
+    Log( "getData")
+End Sub
+
+Event btnBack.Click
+    Close
+End Event
+
+Event SampleEstimateDetails.btnDelete.Click
+    &SampleEstimateDetails.Remove(row)
+End Event
+
+Event SampleEstimateDetails.Quantity.Change
+    &SampleEstimateDetails(row).Amount = &SampleEstimateDetails(row).Quantity * &SampleEstimateDetails(row).Price
+End Event
+
+Event SampleEstimateDetails.Price.Change
+    &SampleEstimateDetails(row).Amount = &SampleEstimateDetails(row).Quantity * &SampleEstimateDetails(row).Price
+End Event
+
+Event btnAdd.Click
+    &SampleEstimateDetail.Clear()
+    &SampleEstimateDetails.Add(&SampleEstimateDetail)
+End Event
+// ===== テンプレートのコードここまで =====

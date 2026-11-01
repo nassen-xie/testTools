@@ -53,7 +53,8 @@
       "notNull": false,
       "primaryKeyOrder": null,
       "default": null,
-      "remarks": null
+      "remarks": null,
+      "role": "CreateUser"
     },
     {
       "no": 5,
@@ -65,7 +66,8 @@
       "notNull": false,
       "primaryKeyOrder": null,
       "default": "Sysdate",
-      "remarks": null
+      "remarks": null,
+      "role": "CreateDate"
     },
     {
       "no": 6,
@@ -77,7 +79,8 @@
       "notNull": false,
       "primaryKeyOrder": null,
       "default": null,
-      "remarks": null
+      "remarks": null,
+      "role": "UpdateUser"
     },
     {
       "no": 7,
@@ -89,7 +92,8 @@
       "notNull": false,
       "primaryKeyOrder": null,
       "default": "Sysdate",
-      "remarks": null
+      "remarks": null,
+      "role": "UpdateDate"
     }
   ],
   "references": [],

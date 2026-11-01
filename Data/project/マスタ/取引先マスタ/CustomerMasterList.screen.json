@@ -12,6 +12,13 @@
       "isArray": false
     },
     {
+      "logicalName": "ユーザコード",
+      "physicalName": "UserCD2",
+      "baseType": "MST00002.MST00002_UserCD",
+      "dataType": "VARCHAR(10)",
+      "isArray": false
+    },
+    {
       "logicalName": "ユーザ名",
       "physicalName": "UserName",
       "baseType": "MST00002.MST00002_UserNM",
@@ -61,24 +68,38 @@
       "isArray": true
     },
     {
-      "logicalName": "ss",
-      "physicalName": "RowSelect",
-      "baseType": "Number(4)",
-      "dataType": "INTEGER(4)",
+      "logicalName": "取引区分",
+      "physicalName": "EnumRradio",
+      "baseType": "TransactionKbn",
+      "dataType": "VARCHAR(2)",
       "isArray": false
     },
     {
-      "logicalName": "",
-      "physicalName": "RowSelects",
-      "baseType": "Number(4)",
-      "dataType": "INTEGER(4)",
-      "isArray": true
+      "logicalName": "区分",
+      "physicalName": "radiogroup",
+      "baseType": "CategoryKBN",
+      "dataType": "VARCHAR(2)",
+      "isArray": false
+    },
+    {
+      "logicalName": "dddd",
+      "physicalName": "DelFlg",
+      "baseType": "DelFlg",
+      "dataType": "VARCHAR(1)",
+      "isArray": false
     },
     {
       "logicalName": "メッセージStruct",
       "physicalName": "rsMessage",
       "baseType": "Message",
       "dataType": "MESSAGE",
+      "isArray": false
+    },
+    {
+      "logicalName": "取引区分",
+      "physicalName": "EnumRradioOptions",
+      "baseType": "Map(String(10),String(50))",
+      "dataType": "",
       "isArray": false
     }
   ],
@@ -127,6 +148,54 @@
           "children": [
             {
               "kind": "Variable",
+              "physicalName": "EnumRradio",
+              "logicalName": "取引区分",
+              "variable": "EnumRradio",
+              "partType": "ComboBox",
+              "required": false,
+              "maxLength": 0,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "captionPercentage": "25%",
+              "visible": true
+            },
+            {
+              "kind": "RadioButton",
+              "physicalName": "radio2",
+              "logicalName": "選択肢2",
+              "partType": "Text",
+              "required": false,
+              "maxLength": 0,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "visible": true,
+              "groupName": "radiogroup",
+              "value": "02",
+              "groupCaption": "sssss",
+              "groupCaptionPercentage": "25%",
+              "checked": true
+            },
+            {
+              "kind": "RadioButton",
+              "physicalName": "radio",
+              "logicalName": "選択肢1",
+              "partType": "Text",
+              "required": false,
+              "maxLength": 0,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "visible": true,
+              "groupName": "radiogroup",
+              "value": "01",
+              "groupCaption": "sssss",
+              "groupCaptionPercentage": "25%",
+              "checked": true
+            },
+            {
+              "kind": "Variable",
               "physicalName": "CustomerCD",
               "logicalName": "取引先コード",
               "variable": "CustomerCD",
@@ -160,7 +229,7 @@
               "physicalName": "CustomerOmission",
               "logicalName": "取引先略称",
               "variable": "CustomerOmission",
-              "partType": "Text",
+              "partType": "ComboBox",
               "required": false,
               "maxLength": 100,
               "minLength": 0,
@@ -168,7 +237,8 @@
               "captionVisible": true,
               "captionPercentage": "25%",
               "className": "wp-150",
-              "visible": true
+              "visible": true,
+              "enumDisplay": "ValueName"
             },
             {
               "kind": "Variable",
@@ -183,8 +253,7 @@
               "captionVisible": true,
               "captionPercentage": "25%",
               "className": "wp-150",
-              "visible": true,
-              "wareki": true
+              "visible": true
             },
             {
               "kind": "Variable",
@@ -198,45 +267,44 @@
               "options": "",
               "captionVisible": true,
               "captionPercentage": "25%",
-              "className": "wp-100",
+              "className": "wp-200",
               "visible": true,
               "blankItem": "-",
               "multiSelect": true,
               "enumDisplay": "ValueName"
             },
             {
-              "kind": "Table",
-              "physicalName": "table1",
-              "logicalName": "テーブル",
+              "kind": "Variable",
+              "physicalName": "UserCD",
+              "logicalName": "ユーザコード",
+              "variable": "UserCD",
               "partType": "Text",
               "required": false,
-              "maxLength": 0,
+              "maxLength": 10,
               "minLength": 0,
               "options": "",
               "captionVisible": true,
+              "captionPercentage": "25%",
+              "className": "wp-200",
               "visible": true,
-              "columns": 3,
-              "column": 1,
               "children": [
                 {
-                  "kind": "Variable",
-                  "physicalName": "UserCD",
-                  "logicalName": "ユーザコード",
-                  "variable": "UserCD",
+                  "kind": "PopupScreen",
+                  "physicalName": "UserPopup",
+                  "logicalName": "ユーザ選択画面",
                   "partType": "Text",
                   "required": false,
-                  "maxLength": 10,
+                  "maxLength": 0,
                   "minLength": 0,
                   "options": "",
                   "captionVisible": true,
-                  "captionPercentage": "25%",
                   "visible": true,
-                  "autoComplete": true,
+                  "popupScreen": "UserPopup",
                   "children": [
                     {
-                      "kind": "PopupScreen",
-                      "physicalName": "UserPopup",
-                      "logicalName": "ユーザ選択画面",
+                      "kind": "PopupParameters",
+                      "physicalName": "Parameters",
+                      "logicalName": "引数",
                       "partType": "Text",
                       "required": false,
                       "maxLength": 0,
@@ -244,12 +312,11 @@
                       "options": "",
                       "captionVisible": true,
                       "visible": true,
-                      "popupScreen": "UserPopup",
                       "children": [
                         {
-                          "kind": "PopupParameters",
-                          "physicalName": "Parameters",
-                          "logicalName": "引数",
+                          "kind": "PopupParameter",
+                          "physicalName": "UserCD",
+                          "logicalName": "inout：String",
                           "partType": "Text",
                           "required": false,
                           "maxLength": 0,
@@ -257,96 +324,119 @@
                           "options": "",
                           "captionVisible": true,
                           "visible": true,
-                          "children": [
-                            {
-                              "kind": "PopupParameter",
-                              "physicalName": "UserCD",
-                              "logicalName": "inout：String",
-                              "partType": "Text",
-                              "required": false,
-                              "maxLength": 0,
-                              "minLength": 0,
-                              "options": "",
-                              "captionVisible": true,
-                              "visible": true,
-                              "direction": "inout",
-                              "parameterType": "String",
-                              "parameterVariable": "UserCD"
-                            },
-                            {
-                              "kind": "PopupParameter",
-                              "physicalName": "UserNm",
-                              "logicalName": "out：String",
-                              "partType": "Text",
-                              "required": false,
-                              "maxLength": 0,
-                              "minLength": 0,
-                              "options": "",
-                              "captionVisible": true,
-                              "visible": true,
-                              "direction": "out",
-                              "parameterType": "String",
-                              "parameterVariable": "UserName"
-                            }
-                          ]
+                          "direction": "inout",
+                          "parameterType": "String",
+                          "parameterVariable": "UserCD"
+                        },
+                        {
+                          "kind": "PopupParameter",
+                          "physicalName": "UserNm",
+                          "logicalName": "out：String",
+                          "partType": "Text",
+                          "required": false,
+                          "maxLength": 0,
+                          "minLength": 0,
+                          "options": "",
+                          "captionVisible": true,
+                          "visible": true,
+                          "direction": "out",
+                          "parameterType": "String",
+                          "parameterVariable": "UserCD"
                         }
                       ]
                     }
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "kind": "Variable",
+              "physicalName": "UserCD2",
+              "logicalName": "ユーザコード",
+              "variable": "UserCD2",
+              "partType": "Text",
+              "required": false,
+              "maxLength": 10,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "captionPercentage": "25%",
+              "visible": true,
+              "children": [
                 {
-                  "kind": "Variable",
-                  "physicalName": "UserName",
-                  "logicalName": "ユーザ名",
-                  "variable": "UserName",
-                  "partType": "Text",
-                  "required": false,
-                  "maxLength": 50,
-                  "minLength": 0,
-                  "options": "",
-                  "captionVisible": true,
-                  "captionPercentage": "25%",
-                  "visible": true
-                },
-                {
-                  "kind": "Tabs",
-                  "physicalName": "tabs",
-                  "logicalName": "タブ",
+                  "kind": "PopupScreen",
+                  "physicalName": "SampleUserPopup",
+                  "logicalName": "ユーザ選択画面",
                   "partType": "Text",
                   "required": false,
                   "maxLength": 0,
                   "minLength": 0,
                   "options": "",
-                  "captionVisible": false,
+                  "captionVisible": true,
                   "visible": true,
+                  "popupScreen": "SampleUserPopup",
                   "children": [
                     {
-                      "kind": "Tab",
-                      "physicalName": "tab",
-                      "logicalName": "ページ 1",
+                      "kind": "PopupParameters",
+                      "physicalName": "Parameters",
+                      "logicalName": "引数",
                       "partType": "Text",
                       "required": false,
                       "maxLength": 0,
                       "minLength": 0,
                       "options": "",
                       "captionVisible": true,
-                      "visible": true
-                    },
-                    {
-                      "kind": "Tab",
-                      "physicalName": "tab1",
-                      "logicalName": "ページ 2",
-                      "partType": "Text",
-                      "required": false,
-                      "maxLength": 0,
-                      "minLength": 0,
-                      "options": "",
-                      "captionVisible": true,
-                      "visible": true
+                      "visible": true,
+                      "children": [
+                        {
+                          "kind": "PopupParameter",
+                          "physicalName": "pioUserCd",
+                          "logicalName": "inout：String",
+                          "partType": "Text",
+                          "required": false,
+                          "maxLength": 0,
+                          "minLength": 0,
+                          "options": "",
+                          "captionVisible": true,
+                          "visible": true,
+                          "direction": "inout",
+                          "parameterType": "String",
+                          "parameterVariable": "UserCD2"
+                        },
+                        {
+                          "kind": "PopupParameter",
+                          "physicalName": "poUserNm",
+                          "logicalName": "out：String",
+                          "partType": "Text",
+                          "required": false,
+                          "maxLength": 0,
+                          "minLength": 0,
+                          "options": "",
+                          "captionVisible": true,
+                          "visible": true,
+                          "direction": "out",
+                          "parameterType": "String",
+                          "parameterVariable": "UserName"
+                        }
+                      ]
                     }
                   ]
                 }
               ]
+            },
+            {
+              "kind": "Variable",
+              "physicalName": "UserName",
+              "logicalName": "ユーザ名",
+              "variable": "UserName",
+              "partType": "Text",
+              "required": false,
+              "maxLength": 50,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "captionPercentage": "25%",
+              "visible": true
             },
             {
               "kind": "ButtonGroup",
@@ -418,6 +508,20 @@
                   "icon": "save"
                 }
               ]
+            },
+            {
+              "kind": "Variable",
+              "physicalName": "DelFlg",
+              "logicalName": "dddd",
+              "variable": "DelFlg",
+              "partType": "Radio",
+              "required": false,
+              "maxLength": 0,
+              "minLength": 0,
+              "options": "",
+              "captionVisible": true,
+              "captionPercentage": "25%",
+              "visible": true
             }
           ]
         },
@@ -435,8 +539,6 @@
           "visible": true,
           "sortable": true,
           "pagerAlign": "Center",
-          "totalRow": true,
-          "totalCaption": "小记",
           "children": [
             {
               "kind": "RowNumber",
@@ -551,7 +653,10 @@
               "options": "",
               "captionVisible": true,
               "visible": true,
-              "width": "180px"
+              "width": "180px",
+              "ellipsis": true,
+              "hoverTooltip": true,
+              "total": "Label"
             },
             {
               "kind": "Variable",
@@ -565,7 +670,9 @@
               "options": "",
               "captionVisible": true,
               "visible": true,
-              "width": "180px"
+              "width": "180px",
+              "ellipsis": true,
+              "total": "Label"
             },
             {
               "kind": "Variable",
@@ -579,7 +686,9 @@
               "options": "",
               "captionVisible": true,
               "visible": true,
-              "width": "180px"
+              "width": "180px",
+              "ellipsis": true,
+              "total": "Label"
             },
             {
               "kind": "BtnPanel",

@@ -12,12 +12,8 @@ Event Users.RowClick
 
 End Event
 
-Event btnOk.Click
-    Log( "btnOk.Click")
-    Close
-End Event
-
-Event btnCancel.Click
+Event btnEnter.Click
+    Log( "btnEnter.Click")
     Close
 End Event
 

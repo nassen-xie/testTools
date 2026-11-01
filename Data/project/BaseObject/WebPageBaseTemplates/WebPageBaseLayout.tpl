@@ -36,8 +36,8 @@
             <span class="hidden text-lg font-bold tracking-tight text-slate-900 sm:inline">CEMシステム</span>
         </div>
         <div class="flex items-center gap-3 sm:gap-4">
-            <span class="hidden text-sm text-slate-500 sm:inline">田中 太郎</span>
-            <a th:href="@{/login}" class="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 transition hover:bg-slate-50">ログアウト</a>
+            <span class="hidden text-sm text-slate-500 sm:inline" th:if="${session?.UserNM != null and session?.UserNM != ''}" th:text="${session.UserNM}">田中 太郎</span>
+            <form th:if="${session?.LoginUsr != null}" th:action="@{/logout}" method="post" class="m-0"><button type="submit" class="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 transition hover:bg-slate-50">ログアウト</button></form>
         </div>
     </header>
 

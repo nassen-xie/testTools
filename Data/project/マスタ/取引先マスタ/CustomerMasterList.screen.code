@@ -1,5 +1,4 @@
 // 画面のイベント（文法は Docoment/语法示例.xlsx）
-
 Sub Search
     For Each MST00004  Into &Customers
         Where MST00004.MST00004_CustomerCD Like "%"+&CustomerCD+"%" When  Not &CustomerCD.IsEmpty
@@ -45,4 +44,8 @@ End Event
 // 捕まえていないエラー（トランザクションは rollback 済み）
 Event Form.Error(ex)
     CommonError.Call(ex)
+End Event
+
+Event Form.Load
+    // EnumRradio.Options
 End Event

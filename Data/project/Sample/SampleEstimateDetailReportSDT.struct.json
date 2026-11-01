@@ -1,0 +1,41 @@
+{
+  "name": "SampleEstimateDetailReportSDT",
+  "caption": "NewReport（見積の明細）",
+  "members": [
+    {
+      "logicalName": "品名",
+      "physicalName": "ItemNm",
+      "baseType": "String(100)",
+      "dataType": "VARCHAR(100)",
+      "isArray": false
+    },
+    {
+      "logicalName": "単位",
+      "physicalName": "Unit",
+      "baseType": "String(10)",
+      "dataType": "VARCHAR(10)",
+      "isArray": false
+    },
+    {
+      "logicalName": "単価",
+      "physicalName": "Price",
+      "baseType": "Number(9)",
+      "dataType": "INTEGER(9)",
+      "isArray": false
+    },
+    {
+      "logicalName": "数量",
+      "physicalName": "Quantity",
+      "baseType": "Number(9)",
+      "dataType": "INTEGER(9)",
+      "isArray": false
+    },
+    {
+      "logicalName": "金額",
+      "physicalName": "Amount",
+      "baseType": "Number(12)",
+      "dataType": "BIGINT(12)",
+      "isArray": false
+    }
+  ]
+}
