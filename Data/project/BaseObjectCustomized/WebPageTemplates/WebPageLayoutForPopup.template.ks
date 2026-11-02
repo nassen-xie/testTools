@@ -247,6 +247,7 @@
           "foreColor": "#C91DC9",
           "underline": true,
           "strikeout": true,
+          "textAlign": "Center",
           "verticalAlign": "Center",
           "children": [
             {

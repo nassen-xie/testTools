@@ -97,10 +97,10 @@ Sub getData
         &SampleEstimateDetail.Clear()
         &SampleEstimateDetail.ItemCd = "100" + &i
         &SampleEstimateDetail.ItemNm = "商品名" + &i
-        &SampleEstimateDetail.unit = "Kg"
+        &SampleEstimateDetail.unit = "1"
         &SampleEstimateDetail.CreateDate = Now
-        &SampleEstimateDetail.Quantity = &i + 2
-        &SampleEstimateDetail.Price= &i + 2
+        &SampleEstimateDetail.Quantity = &i*1000 + 2.12
+        &SampleEstimateDetail.Price= &i*1234+ 2.34
         &SampleEstimateDetail.Amount =  &SampleEstimateDetail.Quantity  * &SampleEstimateDetail.Price
         &SampleEstimateDetails.Add(&SampleEstimateDetail)
     Next

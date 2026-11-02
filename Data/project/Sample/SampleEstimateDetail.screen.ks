@@ -218,7 +218,7 @@
                   "physicalName": "TransactionKbn",
                   "logicalName": "取引区分",
                   "variable": "SampleEstimate.TransactionKbn",
-                  "partType": "Text",
+                  "partType": "ComboBox",
                   "required": false,
                   "maxLength": 2,
                   "minLength": 0,
@@ -354,6 +354,7 @@
                   "maxLength": 0,
                   "minLength": 0,
                   "options": "",
+                  "format": "#,###,###,###",
                   "captionVisible": true,
                   "captionPercentage": "25%",
                   "visible": true
@@ -511,11 +512,11 @@
                   "physicalName": "unit",
                   "logicalName": "単位",
                   "variable": "SampleEstimateDetails.unit",
-                  "partType": "Text",
+                  "partType": "ComboBox",
                   "required": false,
                   "maxLength": 0,
                   "minLength": 0,
-                  "options": "",
+                  "options": "1=Kg,2=g,3=m",
                   "captionVisible": true,
                   "visible": true,
                   "total": "Sum",
@@ -531,8 +532,10 @@
                   "maxLength": 0,
                   "minLength": 0,
                   "options": "",
+                  "format": "#,###,###,##0",
                   "captionVisible": true,
                   "visible": true,
+                  "total": "Sum",
                   "editable": true
                 },
                 {
@@ -545,6 +548,7 @@
                   "maxLength": 0,
                   "minLength": 0,
                   "options": "",
+                  "format": "#,###,###,##0.00",
                   "captionVisible": true,
                   "visible": true,
                   "editable": true
@@ -559,8 +563,10 @@
                   "maxLength": 0,
                   "minLength": 0,
                   "options": "",
+                  "format": "#,###,###,###",
                   "captionVisible": true,
-                  "visible": true
+                  "visible": true,
+                  "total": "Sum"
                 },
                 {
                   "kind": "BtnPanel",

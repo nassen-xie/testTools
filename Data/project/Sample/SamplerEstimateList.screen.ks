@@ -497,6 +497,7 @@
               "maxLength": 0,
               "minLength": 0,
               "options": "",
+              "format": "#,###,###,###",
               "captionVisible": true,
               "visible": true
             }

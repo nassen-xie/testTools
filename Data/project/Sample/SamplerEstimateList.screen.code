@@ -21,7 +21,7 @@ Sub getData
         &SampleEstimate_tmp.EstimateDate = Now
         &SampleEstimate_tmp.UserCD= "abcde@google.co.jp"
         &SampleEstimate_tmp.CustomerCD = "03-1234-5678"
-        &SampleEstimate_tmp.Amount = &i *  &i
+        &SampleEstimate_tmp.Amount = &i *  &i*100
         &SampleEstimates.Add(&SampleEstimate_tmp)
     Next
 
