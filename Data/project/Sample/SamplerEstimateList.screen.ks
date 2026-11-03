@@ -53,6 +53,20 @@
       "baseType": "SampleEstimateDetailReportSDT",
       "dataType": "",
       "isArray": true
+    },
+    {
+      "logicalName": "testRadio用項目",
+      "physicalName": "testRadio",
+      "baseType": "String(2)",
+      "dataType": "VARCHAR(2)",
+      "isArray": false
+    },
+    {
+      "logicalName": "testRadio用項目",
+      "physicalName": "testRadio_copy",
+      "baseType": "String(2)",
+      "dataType": "VARCHAR(2)",
+      "isArray": false
     }
   ],
   "interface": [],
@@ -117,11 +131,11 @@
                   "physicalName": "TransactionKbn",
                   "logicalName": "取引区分",
                   "variable": "SampleEstimate.TransactionKbn",
-                  "partType": "Text",
+                  "partType": "ComboBox",
                   "required": false,
                   "maxLength": 2,
                   "minLength": 0,
-                  "options": "",
+                  "options": "01=輸入, 02=輸出",
                   "captionVisible": true,
                   "captionPercentage": "25%",
                   "visible": true
@@ -142,6 +156,36 @@
                 },
                 {
                   "kind": "Variable",
+                  "physicalName": "testRadio",
+                  "logicalName": "testRadio用項目",
+                  "variable": "testRadio",
+                  "partType": "Radio",
+                  "required": false,
+                  "maxLength": 2,
+                  "minLength": 0,
+                  "options": "01=輸入, 02=輸出",
+                  "captionVisible": true,
+                  "captionPercentage": "25%",
+                  "visible": true,
+                  "labelPosition": "Bottom",
+                  "column": 1
+                },
+                {
+                  "kind": "Variable",
+                  "physicalName": "testRadio_copy",
+                  "logicalName": "testRadio用項目",
+                  "variable": "testRadio_copy",
+                  "partType": "Radio",
+                  "required": false,
+                  "maxLength": 2,
+                  "minLength": 0,
+                  "options": "01=輸入, 02=輸出",
+                  "captionVisible": true,
+                  "captionPercentage": "25%",
+                  "visible": true
+                },
+                {
+                  "kind": "Variable",
                   "physicalName": "UserCD",
                   "logicalName": "担当者コード",
                   "variable": "SampleEstimate.UserCD",
@@ -153,6 +197,7 @@
                   "captionVisible": true,
                   "captionPercentage": "25%",
                   "visible": true,
+                  "column": 1,
                   "children": [
                     {
                       "kind": "PopupScreen",
@@ -228,20 +273,6 @@
                   "captionVisible": true,
                   "captionPercentage": "25%",
                   "visible": true
-                },
-                {
-                  "kind": "Variable",
-                  "physicalName": "Amount",
-                  "logicalName": "金額",
-                  "variable": "SampleEstimate.Amount",
-                  "partType": "Number",
-                  "required": false,
-                  "maxLength": 0,
-                  "minLength": 0,
-                  "options": "",
-                  "captionVisible": true,
-                  "captionPercentage": "25%",
-                  "visible": false
                 }
               ]
             },
@@ -440,11 +471,11 @@
               "physicalName": "TransactionKbn",
               "logicalName": "取引区分",
               "variable": "SampleEstimates.TransactionKbn",
-              "partType": "Text",
+              "partType": "ComboBox",
               "required": false,
               "maxLength": 2,
               "minLength": 0,
-              "options": "",
+              "options": "01=輸入, 02=輸出",
               "captionVisible": true,
               "visible": true
             },

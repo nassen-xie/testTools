@@ -12,7 +12,7 @@ Sub getData
     For &i = 1 To 15
         &SampleEstimate_tmp.Clear()
         &SampleEstimate_tmp.EstimateCD = "10001" + &i
-        &SampleEstimate_tmp.TransactionKbn = "田中　"
+        &SampleEstimate_tmp.TransactionKbn = "01"
         &SampleEstimate_tmp.EstimateDate = Now
         &SampleEstimate_tmp.UserCD= "abcde@google.co.jp"
         &SampleEstimate_tmp.CustomerCD = "03-1234-5678"

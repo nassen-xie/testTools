@@ -222,7 +222,7 @@
                   "required": false,
                   "maxLength": 2,
                   "minLength": 0,
-                  "options": "",
+                  "options": "01=輸入, 02=輸出",
                   "captionVisible": true,
                   "captionPercentage": "25%",
                   "visible": true
